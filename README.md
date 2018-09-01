@@ -1,6 +1,8 @@
 # Engenharia de Software
 
-## Projeto
+## Descrição do Projeto
+
+## Justificativa do Projeto
 
 ## Equipe
 
