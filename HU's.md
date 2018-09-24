@@ -1,4 +1,4 @@
-## Histórias do Usuário.
+## Histórias de Usuário.
 Eu como usuário do sistema gostaria de *fazer o login com mais de uma opção* pois eu quero *verificar o sistema como usuário*.  
 Eu como usuário do sistema gostaria de *alterar minha senha* pois eu  *não consigo acesso ao sistema*.  
 Eu como usuário do sistema gostaria de *realizar meu cadastro na plataforma* pois eu quero *criar meu perfil e realizar os cursos*.  
@@ -13,7 +13,7 @@ Eu como usuário do sistema gostaria de *ter onde verificar os cursos mais fáce
 Eu como usuário do sistema gostaria de *ter onde verificar os cursos mais importantes de se aprender* pois eu quero *começar a aprender a partir do curso mais importante*.  
 Eu como usuário do sistema gostaria de *saber o que fazer a partir de determinado curso* pois eu quero *saber o que cursar em seguida, pois não conheço muito de tecnologias*.  
 Eu como usuário do sistema gostaria de *saber como mexer no site como é que é* pois eu quero *conseguir usufruir o máximo possível do site para aprender mais e não desanimar*.  
-Eu como usuário do sistema gostaria de *receber lembretes para fazer os cursos* pois eu quero *não desistimular de fazer os cursos  *.  
+Eu como usuário do sistema gostaria de *receber lembretes para fazer os cursos* pois eu quero *não desistimular de fazer os cursos*.  
 Eu como usuário do sistema gostaria de *receber algum tipo de recompença por ter conclúido um curso* pois eu quero *ter "orgulho" de tê-lo concluído*.  
 Eu como usuário do sistema gostaria de *ter um determinado nível baseado nos cursos que finalizei* pois eu quero *ter uma forma de medição do quão estou bem*.  
 Eu como usuário do sistema gostaria de *ter a possibilidade de refrescar a memória com os pontos importantes dos cursos* pois eu quero *ficar por dentro e sempre lembrar do que aprendi*.  
