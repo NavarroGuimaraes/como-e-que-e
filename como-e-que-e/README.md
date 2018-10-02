@@ -1,24 +1,39 @@
-# README
+# Getting started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What do you need
 
-Things you may want to cover:
+You need to have **Ruby** installed.
+> Download on https://www.ruby-lang.org/pt/
 
-* Ruby version
+You also need to have **Bundle** installed.
+> If you don't have, follow the tutorial on https://bundler.io
 
-* System dependencies
+## Installing
 
-* Configuration
+Inside the apps folder run:
 
-* Database creation
+``` terminal
+  bundle install
+```
 
-* Database initialization
+After install the dependencies start the server running:
 
-* How to run the test suite
+``` terminal
+  rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Executing linter
 
-* Deployment instructions
+**For more information check [Rubocop | Basic usage](https://rubocop.readthedocs.io/en/latest/basic_usage/)**
 
-* ...
+For running the rubocop linter execute the following command on the root folder of the project
+
+``` terminal
+ rubocop
+```
+
+And if you want to fix the errors automatically run:
+
+```terminal
+  rubocop -a
+```
