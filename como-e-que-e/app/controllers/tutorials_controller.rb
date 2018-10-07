@@ -2,6 +2,6 @@
 
 class TutorialsController < ApplicationController
   def index
-    @tutorials = [1,2,3,4]
+    @tutorials = Tutorial.all
   end
 end
