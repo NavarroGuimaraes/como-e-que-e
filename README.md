@@ -4,7 +4,7 @@ Projeto da disciplina (IF977) Engenharia de Software, do curso de graduação em
 
 ## Descrição do Projeto
 
-O *Como é que é?* é uma aplicação web que irá disponibilizar tutoriais para o aprendizado de ferramentas tecnológicas do cotidiano como WhatsApp, Instagram, Facebook, Twitter, Linkedin, Airbnb, Uber, Uber Eats, Ifood, Discord, Word, Power Point, Excel; Com foco em pessoas mais velhas. Os tutoriais serão disponibilizados com um passo-a-para utilização e terá um espaço disponível para discurssão entre os usuários e também entre a equipe do sistema. O app tem o intuito de ajudar essas pessoas com mais dificuldades a entender as ferramentas tecnológicas e estarem mais imersas no contexto atual da sociedade.
+O *Como é que é?* é uma aplicação web que irá disponibilizar tutoriais para o aprendizado de ferramentas tecnológicas do cotidiano como WhatsApp, Instagram, Facebook, Twitter, Linkedin, Airbnb, Uber, Uber Eats, Ifood, Discord, Word, Power Point, Excel; Com foco em pessoas mais velhas. Os tutoriais serão disponibilizados com um passo-a-para utilização e terá um espaço disponível para discussão entre os usuários e também entre a equipe do sistema. O app tem o intuito de ajudar essas pessoas com mais dificuldades a entender as ferramentas tecnológicas e estarem mais imersas no contexto atual da sociedade.
 
 ## Justificativa do Projeto
 
