@@ -87,5 +87,5 @@ test:
 production:
   <<: *default
   database: como-e-que-e_production
-  username: como-e-que-e
-  password: <%= ENV['DB_PASSWORD'] %>
+  username: comoequee
+  password: comoequee
