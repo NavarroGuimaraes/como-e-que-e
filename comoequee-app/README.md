@@ -8,13 +8,31 @@ You need to have **Ruby** installed.
 You also need to have **Bundle** installed.
 > If you don't have, follow the tutorial on https://bundler.io
 
-## Installing
+## Installing dependencies
 
 Inside the apps folder run:
 
 ``` terminal
   bundle install
 ```
+
+## Database
+
+Check if you already have the database, otherwise run the following command:
+
+``` terminal
+  rake db:create:all
+```
+
+And then make the migrations:
+
+``` terminal
+  rake db:mibrate
+```
+
+### PS: Check if the postgres database is running
+
+## Start the server
 
 After install the dependencies start the server running:
 
