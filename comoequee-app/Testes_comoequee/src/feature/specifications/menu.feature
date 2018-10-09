@@ -18,20 +18,20 @@ Dado que usuário queira navegar entre as telas da plataforma
 
 #------------------------------------- Home -------------------------------------------------
 
-Então Home - Acessar Inicio
-Então Utils - Capturar Evidencia
-Então Home - Acessar ComoFunciona
-Então Utils - Capturar Evidencia
-Então Home - Acessar TutoriaisHome
-Então Utils - Capturar Evidencia
-Então Home - Acessar Contato
-Então Utils - Capturar Evidencia
-Então Home - Acessar Cadastro
-Então Utils - Capturar Evidencia
-Então Cadastro - Clicar em Cancelar
-Então Utils - Capturar Evidencia
-Então Home - Fazer Login
-Então Utils - Capturar Evidencia
-# Quando tivermos login, iremos testar o menu do usuário logado.
+  Então Home - Acessar Inicio
+  Então Utils - Capturar Evidencia
+  Então Home - Acessar ComoFunciona
+  Então Utils - Capturar Evidencia
+  Então Home - Acessar TutoriaisHome
+  Então Utils - Capturar Evidencia
+  Então Home - Acessar Contato
+  Então Utils - Capturar Evidencia
+  Então Home - Acessar Cadastro
+  Então Utils - Capturar Evidencia
+  Então Cadastro - Clicar em Cancelar
+  Então Utils - Capturar Evidencia
+  Então Home - Fazer Login
+  Então Utils - Capturar Evidencia
+  # Quando tivermos login, iremos testar o menu do usuário logado.
 
 #--------------------------------------------------------------------------------------------

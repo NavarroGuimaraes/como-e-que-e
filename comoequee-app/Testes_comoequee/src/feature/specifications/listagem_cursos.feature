@@ -13,21 +13,21 @@ Dado que usuário queira escolher um tutorial para realizar
 
 #--------------------------------------------------------------------------------------------
 
-@listagem_cursos
-Esquema do Cenário: listar os tutoriais disponíveis para o usuário
+  @listagem_cursos
+  Esquema do Cenário: listar os tutoriais disponíveis para o usuário
 
 #------------------------------------- Home -------------------------------------------------
 
-Então Home - Acessar TutoriaisHome
-Então Utils - Capturar Evidencia
-Então Home - Clicar Ver Mais
-Então Utils - Capturar Evidencia
+  Então Home - Acessar Tutoriais
+  Então Utils - Capturar Evidencia
+  Então Home - Clicar Ver Mais
+  Então Utils - Capturar Evidencia
 #--------------------------------------------------------------------------------------------
 
 #------------------------------------- Tutoriais --------------------------------------------
 
-Então Tutoriais - Clicar Próxima Página
-Então Utils - Capturar Evidencia
-Então Tutoriais - Clicar Próxima Página
-Então Utils - Capturar Evidencia
+  Então Tutoriais - Clicar Próxima Página
+  Então Utils - Capturar Evidencia
+  Então Tutoriais - Clicar Próxima Página
+  Então Utils - Capturar Evidencia
 #--------------------------------------------------------------------------------------------
