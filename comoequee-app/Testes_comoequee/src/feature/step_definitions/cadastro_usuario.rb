@@ -1,4 +1,4 @@
-#language: pt
+Selenium::WebDriver::Chrome.driver_path="C:/chromedriver.exe" 
 
 @cadastro_usuario
 
