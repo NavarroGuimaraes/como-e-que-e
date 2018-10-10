@@ -1,0 +1,14 @@
+<section> 
+  <form method="GET">
+    <input name="search">
+    <input type="submit">
+  <form>
+  <div class="tutorials">
+    <% for @tutorial in @tutorials %>
+      <figure>
+        <img src="">
+        <figcaption><%= @tutorial %></figcaption>
+      </figure>
+    <% end %>
+  </div>
+</section>
