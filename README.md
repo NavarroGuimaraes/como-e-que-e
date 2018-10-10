@@ -15,8 +15,8 @@ Neste conexto em geral descrito, verificamos uma oportunidade de mercado, onde m
 
 ## Equipe
 
-- [Almir Gabriel](https://github.com/almirgabrielgds)
-- [Emerson Victor](https://github.com/EmersonVictor)
-- [José Neto](https://github.com/jcsn2)
-- [José Tomáz](https://github.com/jtomaz99)
-- [Navarro Guimarães](https://github.com/NavarroGuimaraes)
+- [Almir Gabriel](https://github.com/almirgabrielgds) (Desenvolvedor e Tester)
+- [Emerson Victor](https://github.com/EmersonVictor) (Scrum Master e Desenvolvedor)
+- [José Neto](https://github.com/jcsn2) (Product Owner e Desenvolvedor)
+- [José Tomáz](https://github.com/jtomaz99) (Desenvolvedor e Tester)
+- [Navarro Guimarães](https://github.com/NavarroGuimaraes) (Desenvolvedor e Tester)
