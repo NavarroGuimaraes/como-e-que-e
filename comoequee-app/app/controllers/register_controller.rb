@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class RegisterController < ApplicationController
-  def user
+  def index
   end
 end

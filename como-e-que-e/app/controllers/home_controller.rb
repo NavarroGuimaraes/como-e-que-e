@@ -1,4 +1,3 @@
 class HomeController < ActionController::Base
-    def tutorials
-    end
+  def tutorials; end
 end
