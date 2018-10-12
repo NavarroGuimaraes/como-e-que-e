@@ -1,34 +1,34 @@
 # frozen_string_literal: true
 
-Selenium::WebDriver::Chrome.driver_path = "C:/chromedriver.exe"
+Selenium::WebDriver::Chrome.driver_path = 'C:/chromedriver.exe'
 
 @cadastro_usuario
 
 #------------------------------------ Cadastro Usuários ------------------------------------
 
-Dado("que usuário queira realizar os tutoriais") do
+Dado('que usuário queira realizar os tutoriais') do
   tuto = Page.new
   tuto = tuto.clickOnTutorials()
 end
 
 
-Dado("que o usuário esteja na página inicial do site") do
+Dado('que o usuário esteja na página inicial do site') do
   @driver = Selenium::WebDriver.for :chrome
-  @driver.get "http://www.comoequee.com.br"
+  @driver.get 'http://www.comoequee.com.br'
   sleep 3
 end
 
-Quando("clicar no botão cadastrar") do
+Quando('clicar no botão cadastrar') do
   tuto = Page.new
   tudo.clickOnCadastro()
 end
 
-Então("será redirecionado para página de cadastro") do
+Então('será redirecionado para página de cadastro') do
   register = Page.new
   register.register()
 end
 
-Quando("preencher todos os campos") do
+Quando('preencher todos os campos') do
   page = Page.new
   page = check.checkTheData()
   if page == true
@@ -38,7 +38,7 @@ Quando("preencher todos os campos") do
   end
 end
 
-Entao("o cadastro será realizado") do
+Entao('o cadastro será realizado') do
   page = Page.new
   page.msgRegister
 end
