@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'session/destroy'
+  get 'session/create'
+  get 'session/new'
   # FORMAT: get: [path], to: [controller#action], as: [name of route]
   get "index/", to: "index#index", as: "index"
   get "tutoriais/", to: "tutorials#index", as: "tutorials"
