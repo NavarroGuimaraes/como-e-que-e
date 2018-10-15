@@ -1,56 +1,56 @@
-#language: pt
+#language: EN
 # encoding: utf-8
 
-Funcionalidade: testar o cadastramento de usuarios com sucesso
+Feature: test the user registration successfully
 
-Para acompanhar os tutoriais da aplicação
-Como usuário do sistema
-Eu quero fazer meu cadastro no sistema
+to go with the tutorial of the application:
+As a system user
+I want to do my registration in the application
 
-Cenário: cadastro com sucesso
-  Dado que estou na tela de Cadastro
-  Quando eu preencho o campo "nome" com "Cristina Antunes"
-    E preencho o campo "email" com "cristina_antunes@gmail.com"
-    E preencho o campo "telefone" com "81998052857"
-    E preencho o campo "senha" com "123456"
-    E preencho o campo "confirmação_senha" com "123456"
-    E preencho o campo "link_facebook" com "facebook.com/cristina.antunes"
-    E preencho o campo "biografia" com "Quero aprender muito com essa plataforma e desenvolver meus conhecimentos"
-    E aperto o botão "cadastrar"
-  Então o sistema exibe um pop-up  com a mensagem "Usuário cadastrado com sucesso"
-
-
-Cenário: Cadastro com dados não obrigatórios em branco
-  Dado que estou na tela de Cadastro
-  Quando eu preencho o campo "nome" com "Cristina Antunes"
-    E preencho o campo "email" com "cristina_antunes@gmail.com"
-    E preencho o campo "senha" com "123456"
-    E preencho o campo "confirmação_senha" com "123456"
-    E aperto o botão "cadastrar"
-  Então o sistema exibe um pop-up  com a mensagem "Usuário cadastrado com sucesso"
+Scenario: Successful registration
+  Given I'm in the registration module
+  When I fill the field "name" with "Cristina Antunes"
+    And fill the field "email" with "cristina_antunes@gmail"
+	And fill the field "phone number" with "81998052857"
+    And fill the field "password" with "123456"
+    And fill the field "password_confirmation" with "123456"
+    And fill the field "facebook_link" with "facebook.with/cristina.antunes"
+	And fill the field "bio" with "I want to learn with the help of this app and develop my knowledge"
+	And press the button "Sign up"
+  Then the system shall show a pop-up  with the following message: "User registered successfully"
 
 
-Cenário: Cadastro com dados obrigatórios em branco
-  Dado que estou na tela de Cadastro
-  Quando eu preencho o campo "telefone" com "81998052857"
-    E preencho o campo "link_facebook" com "facebook.com/cristina.antunes"
-    E preencho o campo "biografia" com "Quero aprender muito com essa plataforma e desenvolver meus conhecimentos"
-    E aperto o botão "cadastrar"
-  Então o botão "cadastrar" estará desabilitado
+Scenario: Registration with blank non-required fields
+  Given I'm in the registration module
+  When I fill the field "name" with "Cristina Antunes"
+    And fill the field "email" with "cristina_antunes@gmail.with"
+    And fill the field "password" with "123456"
+    And fill the field "password_confirmation" with "123456"
+    And press the button "Register"
+  Then the app shall show a pop-up with the following message: "User registered successfully"
 
-Cenário: cancelamento de cadastro
-  Dado que estou na tela de Cadastro
-  Quando eu preencho o campo "nome" com "Cristina Antunes"
-    E preencho o campo "email" com "cristina_antunes@gmail.com"
-    E preencho o campo "telefone" com "81998052857"
-    E preencho o campo "senha" com "123456"
-    E preencho o campo "confirmação_senha" com "123456"
-    E preencho o campo "link_facebook" com "facebook.com/cristina.antunes"
-    E preencho o campo "biografia" com "Quero aprender muito com essa plataforma e desenvolver meus conhecimentos"
-    E aperto o botão "cancelar"
-  Então irá limpar todos os campos do formulário
 
-Cenário: Login na tela de cadastro
-  Dado que estou na tela de Cadastro 
-  Quando eu clico no botão "Faça seu Login"
-  Então deve exibir a tela fe Login do sistema
+Scenario: Registration with blank required fields
+  Given I'm in the registration module
+  When I fill the field "phone number" with "81998052857"
+	And fill the field "facebook_link" with "facebook.with/cristina.antunes"
+    And fill the field "bio" with "I want to learn with the help of this app and develop my knowledge"
+    And try to press the button "Register"
+  Then The button "Register" shall be disabled
+
+Scenario: Register cancellation
+  Given I'm in the registration module
+  When I fill the field "Name" with "Cristina Antunes"
+    And fill the field "email" with "cristina_antunes@gmail.with"
+    And fill the field "phone number" with "81998052857"
+    And fill the field "senha" with "123456"
+    And fill the field "password_confirmation" with "123456"
+    And fill the field "facebook_link" with "facebook.with/cristina.antunes"
+    And fill the field "bio" with "I want to learn with the help of this app and develop my knowledge"
+    E Press the button "cancel"
+  Then The app shall clean all the fields
+
+Scenario: Login in the registration module
+  given I'm in the registration module 
+  when I press the button "Sign in"
+  then the app shall open a sign in module.
