@@ -23,7 +23,10 @@
 }
 
 .icon-nav img {
-    height: 60px;
+        /*altura*/
+    height: 76.4px;
+    /*largura*/
+    width: 124.8px;
 }
 
 .menu {
