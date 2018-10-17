@@ -12,31 +12,41 @@
   <body>
   <!--Navbar-->
 
-      <nav class="navbar">
-        <div class="menu">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Como funciona</a></li>
-                <li><a href="#">Tutoriais</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Cadastro</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar">
+            <div class="icon-nav">
+                <a href="#"><img src="img/icon-navbar.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Como funciona</a></li>
+                    <li><a href="#">Tutoriais</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li>
+                        <a href="#"> <b>Login</b></a>
+                    </li>
+                    <li>
+                        <a href="#"> <b>Cadastro</b></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
     <%= yield %>
     <!--Footer-->
 
-        <footer class="footer">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Como funciona</a></li>
-            <li><a href="#">Tutoriais</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Cadastro</a></li>
-        </ul>
+    <footer>
+        <div class="logo-footer">
+            <a href="#"><img src="img/icon-navbar.png" alt=""></a>
+        </div>
+        <div class="menu-footer">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Como funciona</a></li>
+                <li><a href="#">Tutoriais</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
     </footer>
   </body>
 </html>
