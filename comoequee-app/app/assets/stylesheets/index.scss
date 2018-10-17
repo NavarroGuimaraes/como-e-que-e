@@ -2,11 +2,40 @@
 
 body {
     font-family: Open Sans;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
 }
 
 img {
     height: 100px;
     width: 100px;
+}
+
+
+/*TUTORIALS*/
+
+.tutorials {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-image: image-url('logo-complete@2x.svg');
+}
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+.see-tutorials {
+    height: 40px;
+    width: 100%;
+}
+
+div.button-tutorials {
+    width: 15%;
 }
 
 
