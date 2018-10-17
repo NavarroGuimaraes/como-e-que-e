@@ -1,3 +1,64 @@
-// Place all the styles related to the Index controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*PADRÃO*/
+
+body {
+    font-family: Open Sans;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+
+/*SEE-TUTORIALS*/
+
+.see-tutorials {
+    background: #048CB4;
+    padding: 10px;
+    border: none;
+    border-radius: 4%;
+    text-align: center;
+    color: white;
+}
+
+
+/*HOW-FUNCION*/
+
+section.how-funcion {
+    background-color: #DDE1E2;
+}
+
+.how-funcion {}
+
+.how-funcion p {
+    font-size: 40px;
+}
+
+.image-funcions img {
+    background-color: #ddd;
+    border-radius: 100%;
+}
+
+
+/*OUR-TUTORIALS*/
+
+div.image-tutorials {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-tutorials img {
+    background-color: #ddd;
+    border-radius: 100%;
+    border-right: 20px;
+}
+
+.name-tutorials {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.name-tutorials p {
+    text-align: center;
+}
