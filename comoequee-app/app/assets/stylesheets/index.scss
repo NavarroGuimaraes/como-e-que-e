@@ -23,6 +23,16 @@ img {
    /** background-image: image-url('logo-complete@2x.svg'); **/
 }
 
+/*BUTTON*/
+.see-tutorials {
+    background: #048CB4;
+    padding: 10px;
+    border: none;
+    border-radius: 4%;
+    text-align: center;
+    color: white;
+}
+
 
 
 .text {
@@ -41,16 +51,6 @@ div.button-tutorials {
 }
 
 
-/*SEE-TUTORIALS*/
-
-.see-tutorials {
-    background: #048CB4;
-    padding: 10px;
-    border: none;
-    border-radius: 4%;
-    text-align: center;
-    color: white;
-}
 
 
 /*HOW-FUNCION*/
@@ -67,6 +67,8 @@ section.how-funcion {
     background-color: #ddd;
     border-radius: 100%;
 }
+
+
 
 
 /*OUR-TUTORIALS*/
@@ -106,6 +108,8 @@ section.how-funcion {
 .image-tutorials a:hover{
     color: #FD8F26;
 }
+
+
 
 
 
