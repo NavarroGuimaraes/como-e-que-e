@@ -20,6 +20,8 @@
 .navbar {
     display: flex;
     align-content: flex-start;
+    border-bottom: 1px solid #f1f1f1;
+
 }
 
 .icon-nav img {
@@ -27,6 +29,8 @@
     height: 76.4px;
     /*largura*/
     width: 124.8px;
+    
+    margin-left: 10%;
 }
 
 .menu {
