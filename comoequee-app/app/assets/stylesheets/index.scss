@@ -19,10 +19,16 @@ img {
 
 p{
     margin-top: 0px;
+    font-weight: lighter;
 }
 
 section{
     width: 100%;
+}
+
+label{
+    font-weight: lighter;
+    
 }
 
 
@@ -82,10 +88,11 @@ div.button-tutorials {
     align-items: center;
 }
 
-#div-down p{
+div#div-down p{
+    font-size: 10px;
+    margin-bottom: 0px;
     margin-left: 10px;
-    display: flex;
-    align-items: flex-end;
+
 }
 
 .down-arrows{
@@ -126,32 +133,11 @@ div.button-tutorials {
     height: 30px;
 }
 
-
-/*
-.how-funcion {
-    height: 400px;
-    width: 100%;
-    border-top: 1px solid #f1f1f1;
-}
-
-.how-funcion p {
-    font-size: 40px;
-}
-
-.image-funcions img {
-    background-color: #ddd;
-    border-radius: 100%;
-}
-*/
-
-
-
 /*OUR-TUTORIALS*/
 .our-tutorials{
     height: 400px;
     width: 100%;
     border-top: 1px solid #f1f1f1;
-
 }
 
 .image-tutorials {
@@ -186,6 +172,21 @@ div.button-tutorials {
     color: #FD8F26;
 }
 
+#see-more{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 150px;
+}
+
+#see-more a {
+    margin-bottom: 4px;
+    color: #FD8F26;
+    font-weight: bolder;
+}
+
+
 
 
 
@@ -200,9 +201,13 @@ div.button-tutorials {
     
     border-top: 1px solid #f1f1f1;
     
-    /** background-image: image-url('forms.svg'); **/
-}
+    background-image: image-url('forms.svg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: -10px;
+    background-size: 124px;
 
+}
 
 .contact div{
     width: 50%;
@@ -213,6 +218,66 @@ div.button-tutorials {
 }
 
 #text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    margin-left: 10%;
     order: 1;
 }
 
+/*FORM*/
+
+div#form{
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.campo_nome{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 25px;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.campo_email{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 25px;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+    
+}
+
+.descricao{
+    font-family: Open Sans;
+    color: #9C9C9C;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+
+.btn_submit{
+    font-weight: bolder;
+    width: 70px;
+    font-family: Open Sans;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    background: #048CB4;
+    margin-left: 195px;
+}
+
+
+
+/*BREAKPOINTS*/
+
+@media only screen and (min-width: 320px) {
+    
+    
+
+}
