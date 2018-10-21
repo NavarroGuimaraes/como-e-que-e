@@ -1,7 +1,7 @@
 |#language: pt
 # encoding: utf-8
 
-Feature: testar o menu e todos os caminhos
+Feature: to test the menu and every possible path
 
 To navigate in fomw few clicks though the app
 As an user of the system
