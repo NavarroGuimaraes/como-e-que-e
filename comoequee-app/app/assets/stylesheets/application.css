@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+
+/*NAVBAR*/
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu li {
+    list-style: none;
+    font-family: Open Sans;
+    padding: 2px;
+}
+
+.menu li a {
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer ul {}
+
+.footer li {
+    list-style: none;
+}
+
+.footer li a {
+    text-decoration: none;
+}
