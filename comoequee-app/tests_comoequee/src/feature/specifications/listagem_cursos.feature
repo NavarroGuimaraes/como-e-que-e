@@ -1,11 +1,11 @@
-#language: pt
+#language: EN
 # encoding: utf-8
 
-Feature: Test the application's list of classes/courses
+Feature: Test the application's list of tutorials
 
 To choose a tutorial to do
 As a user of the system
-I Want the system to show me a list of every class/course that it has.
+I Want the system to show me a list of every tutorials that it has.
 
   Scenario: Ver Mais tutorials - Home
 
