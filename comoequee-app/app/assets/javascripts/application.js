@@ -14,3 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+var btn = document.getElementById("see-tutorials")
+
+
+btn.addEventListener('click', function() {
+     alert('deu bom')
+})
