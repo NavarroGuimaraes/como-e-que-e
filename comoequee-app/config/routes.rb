@@ -1,12 +1,16 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'perfil/', to: 'profile#index', as: 'profile'
-  get 'logout/', to: 'session#destroy', as: 'logout'
-  get 'login/', to: 'session#create', as: 'login'
-  get 'cadastro/', to: 'session#new', as: 'register'
-  get 'tutoriais/', to: 'tutorials#index', as: 'tutorials'
-  get 'index/', to: 'index#index', as: 'index'
+  # Session and user routes
+  get  '/login/',       to: 'session#new',      as: 'login'
+  post '/login/',       to: 'session#create',   as: 'login-form'
+  get  '/logout/',      to: 'session#destroy',  as: 'logout'
+  get  '/cadastro/',    to: 'user#new',         as: 'register'
+  post '/cadastro/',    to: 'user#create',      as: 'register-form'
+  # Main routes
+  get  '/perfil/',      to: 'profile#index',    as: 'profile'
+  get  '/tutoriais/',   to: 'tutorials#index',  as: 'tutorials'
+  get  '/index/',       to: 'index#index',      as: 'index'
 
   root 'index#index'
   # FORMAT: get: [path], to: [controller#action], as: [name of route]
