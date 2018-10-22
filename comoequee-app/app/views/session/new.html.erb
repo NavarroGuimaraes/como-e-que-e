@@ -1,9 +1,9 @@
-<!--<%= form_for :user, url: "cadastro/" do |f| %>
+<h1>Login</h1>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+<%= form_tag '/login' do %>
 
-<% end %>-->
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
