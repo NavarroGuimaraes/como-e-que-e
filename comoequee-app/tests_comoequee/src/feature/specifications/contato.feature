@@ -24,8 +24,8 @@ Eu quero que o sistema possua um formulário de contato
   Cenário: Enviar contato sem campo email preenchido - Home
 
     Dado que eu estou na página ContatoHome
-    Quando eu preencher o campo Nome com "Cristina Antunes"
-      E preencho o campo Descrição com "Gostaria de indicar o curso de como usar o email, que não localizei na ferramenta de vocês."
+    Quando eu preencher o campo "Nome" com "Cristina Antunes"
+      E preencho o campo "Descrição" com "Gostaria de indicar o curso de como usar o email, que não localizei na ferramenta de vocês."
       E eu clico no botão "Enviar"
     Então o sistema irá exibir uma mensagem "Favor preencher o email, para poder enviar seu contato"
 
