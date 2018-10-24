@@ -27,6 +27,9 @@
 /*NAVBAR*/
 
 .navbar {
+    position: fixed;
+    background-color: white;
+    top: 0;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #f1f1f1;
@@ -35,13 +38,11 @@
 }
 
 .icon-nav img {
-    /*altura*/
-    height: 76.4px;
-    /*largura*/
-    width: 124.8px;
-    
+    height: 100%;
+    max-width: 124px;
     margin-top: 5px;
     margin-left: 40%;
+    width: 80%;
 }
 
 .menu {
