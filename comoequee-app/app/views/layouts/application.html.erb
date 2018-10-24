@@ -16,16 +16,16 @@
 
     <nav class="navbar">
         <div class="icon-nav">
-            <a href="#"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %>
+            <a href="/"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %>
 
 </a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="/index">Início</a></li>
-                <li><a href="/index">Como funciona</a></li>
-                <li><a href="/tutoriais">Tutoriais</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="/">Início</a></li>
+                <li><a href="#como-funciona">Como funciona</a></li>
+                <li><a href="#tutoriais">Tutoriais</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <% if current_user %>
                     <li><a href="/index"><b>Meu perfil</b></a></li>
                     <li><a href="/logout"><b>Sair</b></a></li>
@@ -46,10 +46,10 @@
             </div>
             <div class="menu-footer">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Como funciona</a></li>
-                    <li><a href="#">Tutoriais</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="#como-funciona">Como funciona</a></li>
+                    <li><a href="#tutoriais">Tutoriais</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
         </footer>
