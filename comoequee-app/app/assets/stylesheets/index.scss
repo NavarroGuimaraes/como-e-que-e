@@ -1,3 +1,361 @@
-// Place all the styles related to the Index controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*PATTERN*/
+
+body {
+    font-family: Open Sans;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    margin: 0px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#title{
+    font-size: 40px;
+}
+
+p{
+    margin-top: 0px;
+    font-weight: lighter;
+}
+
+section{
+    width: 100%;
+}
+
+label{
+    font-weight: lighter;
+    
+}
+
+
+/*TUTORIALS*/
+
+.tutorials {
+    margin-right: 0px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: image-url('tutorials.svg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: -10px;
+    background-size: 124px;
+
+}
+
+div#div-button{
+    margin-left: 12%;
+}
+
+.message{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+}
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+
+/*BUTTON*/
+#see-tutorials {
+    background: #048CB4;
+    padding: 10px;
+    border: none;
+    border-radius: 4%;
+    text-align: center;
+    color: white;
+}
+
+#see-tutorials {
+    height: 40px;
+    width: 100%;
+}
+
+div.button-tutorials {
+    width: 15%;
+}
+
+
+
+/**/
+#div-down{
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div#div-down p{
+    font-size: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+
+}
+
+.down-arrows{
+    width: 30px;
+    height: 60px;
+}
+
+
+
+
+/*HOW-FUNCTION*/
+
+.how-function{
+    border-top: 1px solid #f1f1f1;
+    max-height: 400px;
+}
+
+.how-function b{
+    margin-left: 40px;
+}
+
+.how-function div{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-function{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#column img {
+    background-color: #ddd;
+    border-radius: 100%;
+    border-right: 20px;
+}
+
+#column{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 25%;
+}
+
+#arrow-left{
+    display: flex;
+    justify-content: center;
+    width: 10%;
+}
+
+.arrows{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/*OUR-TUTORIALS*/
+.our-tutorials{
+    height: 400px;
+    width: 100%;
+    border-top: 1px solid #f1f1f1;
+}
+
+.our-tutorials b{
+    margin-left: 40px;
+}
+
+.image-tutorials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.image-tutorials div{
+    height: 20%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-tutorials img {
+    background-color: #ddd;
+    border-radius: 100%;
+    border-right: 20px;
+}
+
+.image-tutorials p{
+    text-align: center;
+}
+
+.image-tutorials a{
+    text-decoration: none;
+    color: black;
+}
+
+.image-tutorials a:hover{
+    color: #FD8F26;
+}
+
+#see-more{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 80px;
+}
+
+#see-more a {
+    margin-bottom: 4px;
+    color: #FD8F26;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*CONTACT*/
+
+.contact{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 400px;
+    width: 100%;
+    
+    border-top: 1px solid #f1f1f1;
+    
+    background-image: image-url('forms.svg');
+    background-repeat: no-repeat;
+    background-position-y: -10px;
+    background-size: 124px;
+
+}
+
+.contact div{
+    width: 50%;
+}
+
+.contact p {
+    margin: 0px;
+}
+
+#text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    margin-left: 15%;
+    order: 1;
+}
+
+/*FORM*/
+
+div#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1%;
+}
+
+#formulario{
+}
+
+.campo_nome{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.campo_email{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+    
+}
+
+.descricao{
+    font-family: Open Sans;
+    color: #9C9C9C;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+
+.btn_submit{
+    font-weight: bolder;
+    width: 70px;
+    font-family: Open Sans;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    background: #048CB4;
+    margin-left: 195px;
+}
+
+
+
+/*BREAKPOINTS*/
+
+@media only screen and (max-width: 778px) {
+    
+    /*Menu*/
+    .icon-nav img {
+        height: 2px;
+        width: 68.4px;
+    }
+    
+    .menu li a{
+        padding: 0px;
+    }
+    
+    .menu li {
+        margin: 0px;
+    }
+    
+    
+    /*Tutorials*/
+    
+    .tutorials div{}
+    
+    .message{
+        margin-left: 60px;
+    }
+    
+    .button-tutorials{
+        margin-left: 60px;
+    }
+    
+    .see-tutorials{
+            height: 40px;
+            width: 150px;
+    }
+    
+    /*Contact*/
+    #form{
+        margin-right: 30px;
+    }
+    
+    #text{
+        margin-left: 160px;
+        
+    }
+}
