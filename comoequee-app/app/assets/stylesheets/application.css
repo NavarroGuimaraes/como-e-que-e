@@ -112,6 +112,11 @@ footer li a:hover {
 }
 
 /*BREAKPOINTS*/
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 768px) {
+    
+    /*MENU*/
+    .menu li {
+        margin: 2px;
+    }
     
 }

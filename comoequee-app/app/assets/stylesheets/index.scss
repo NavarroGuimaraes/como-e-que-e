@@ -41,6 +41,8 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    
+    
     background-image: image-url('tutorials.svg');
     background-repeat: no-repeat;
     background-position-x: 100%;
@@ -49,9 +51,7 @@ label{
 
 }
 
-div#div-button{
-    margin-left: 12%;
-}
+
 
 .message{
     display: flex;
@@ -69,6 +69,11 @@ div#div-button{
 
 
 /*BUTTON*/
+
+div#div-button{
+    margin-left: 12%;
+}
+
 #see-tutorials {
     background: #048CB4;
     padding: 10px;
@@ -133,6 +138,7 @@ div#div-down p{
 .image-function{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 100px;
 }
 
@@ -315,47 +321,31 @@ div#form{
 
 /*BREAKPOINTS*/
 
-@media only screen and (max-width: 778px) {
+@media only screen and (max-width: 768px) {
     
-    /*Menu*/
-    .icon-nav img {
-        height: 2px;
-        width: 68.4px;
+    /*How-Function*/
+    /*Button*/
+    
+    div.button-tutorials {
+        width: 20%;
     }
     
-    .menu li a{
-        padding: 0px;
+    /*Our-tutorials*/
+    
+    .our-tutorials p#title{
+        margin-bottom: 60px;
     }
     
-    .menu li {
-        margin: 0px;
+    img {
+        height: 150px;
+        width: 150px;
+    }
+    
+    #see-more{
+        height: 100px;
     }
     
     
-    /*Tutorials*/
     
-    .tutorials div{}
     
-    .message{
-        margin-left: 60px;
-    }
-    
-    .button-tutorials{
-        margin-left: 60px;
-    }
-    
-    .see-tutorials{
-            height: 40px;
-            width: 150px;
-    }
-    
-    /*Contact*/
-    #form{
-        margin-right: 30px;
-    }
-    
-    #text{
-        margin-left: 160px;
-        
-    }
 }
