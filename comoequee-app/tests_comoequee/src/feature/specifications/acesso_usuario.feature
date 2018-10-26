@@ -9,8 +9,8 @@ Eu quero ter como fazer meu login no sistema de diversas formas
 
 Scenario: Acesso com sucesso - Login - Email
   Dado Que esteja na página de Login
-  Quando eu preencho o campo "nome" com "Cristina Antunes"
-    E preencho o campo "senha" com "123456"
+  Quando eu preencho o campo nome com "Cristina Antunes"
+    E preencho o campo senha com "123456"
 	  E quando eu clico no botão "acessar minha conta"
   Então o sistema vai direcionar para a tela Meu Perfil
 
