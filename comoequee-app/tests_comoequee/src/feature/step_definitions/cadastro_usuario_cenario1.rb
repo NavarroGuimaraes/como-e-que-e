@@ -24,34 +24,14 @@ When(/^fill the field password_confirmation with 123456$/) do
   fill_in 'password_confirmation', :with => "123456"
 end
 
-When(/^fill the field facebook_link with facebook.com/cristina.antunes$/) do
-  fill_in 'password_confirmation', :with => "123456"
+When(/^fill the field facebook_link with facebook.com\/cristina.antunes$/) do
+  fill_in 'facebook_link', :with => "facebook.com/cristina.antunes"
 end
 
-When(/^press the button {string}$/) do |string|
+When(/^press the button CADASTRAR$/) do |string|
   page.find(:signup, 'Cadastrar')
 end
 
 Then("the system shall show a pop-up  with the following message: {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("the app shall show a pop-up with the following message: {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("try to press the button {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("The button {string} shall be disabled") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("Press the button {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("The app shall clean all the fields") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content 'Seu usuário foi cadastrado com sucesso!'
 end
