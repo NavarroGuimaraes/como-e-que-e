@@ -11,7 +11,7 @@ Scenario: Successful registration
   Given I'm in the registration module
   When I fill the field "name" with "Cristina Antunes"
     And fill the field "email" with "cristina_antunes@gmail"
-	And fill the field "phone number" with "81998052857"
+	  And fill the field "phone number" with "81998052857"
     And fill the field "password" with "123456"
     And fill the field "password_confirmation" with "123456"
     And fill the field "facebook_link" with "facebook.with/cristina.antunes"
@@ -47,7 +47,7 @@ Scenario: Register cancellation
     And fill the field "password_confirmation" with "123456"
     And fill the field "facebook_link" with "facebook.with/cristina.antunes"
     And fill the field "bio" with "I want to learn with the help of this app and develop my knowledge"
-    E Press the button "cancel"
+    And Press the button "cancel"
   Then The app shall clean all the fields
 
 Scenario: Login in the registration module
