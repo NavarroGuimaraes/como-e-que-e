@@ -2,13 +2,16 @@
   <form method="GET">
     <input name="search">
     <input type="submit">
-  <form>
+  </form>
   <div class="tutorials">
     <% for @tutorial in @tutorials %>
       <figure>
         <img src="">
-        <figcaption><%= @tutorial %></figcaption>
+        <figcaption><%= @tutorial.name %></figcaption>
       </figure>
     <% end %>
+  </div>
+  <div class="pagination">
+    <%= will_paginate @tutorials %>
   </div>
 </section>
