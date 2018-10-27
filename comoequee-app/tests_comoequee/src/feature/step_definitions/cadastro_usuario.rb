@@ -1,56 +1,119 @@
-# frozen_string_literal: true
+# encoding: utf-8
+#
 
-Selenium::WebDriver::Chrome.driver_path = 'C:/chromedriver.exe'
+# CENARIO 1 ----------------------------------------------------------------------------------------------
 
-@cadastro_usuario
+Given(/^I'm in the registration module $/) do
+  visit '/register'
+end
 
-#------------------------------------ Cadastro Usuários ------------------------------------
+When(/^I fill the fields: name, email, phone, password, password_confirmation, facebook_link$/) do 
+  fill_in 'name', :with => "Cristina Antunes"
+  fill_in 'email', :with => "cristina_antunes@gmail"
+  fill_in "phone_number", :with => "81998052857"
+  fill_in 'password', :with => "123456"
+  fill_in 'password_confirmation', :with => "123456"
+  fill_in 'facebook_link', :with => "facebook.com/cristina.antunes"
+  fill_in 'bio' :with => "Eu quero aprender com a plataforma a aprimorar meus conhecimentos"
 
-Dado('que usuário queira realizar os tutoriais') do
-  tuto = Page.new
-  tuto = tuto.clickOnTutorials()
+And(/^press the button Cadastrar $/) do 
+  page.find(:signup, 'Cadastrar')
+end
+
+Then(/^the system shall show a pop-up  with a message of sucess$/) do 
+  expect(page).to have_content 'Seu usuário foi cadastrado com sucesso!'
+end
+
+# CENARIO 2 ----------------------------------------------------------------------------------------------
+
+Given(/^I'm in the registration module $/) do
+  visit '/register'
+end
+
+When(/^When I fill the fields "name", "email", "password", "password_confirmation" $/) do 
+  fill_in 'name', :with => "Cristina Antunes"
+  fill_in 'email', :with => "cristina_antunes@gmail"
+  fill_in 'password', :with => "123456"
+  fill_in 'password_confirmation', :with => "123456"
+
+And(/^press the button Cadastrar $/) do 
+  page.find(:signup, 'Cadastrar')
+end
+
+Then(/^the system shall show a pop-up  with a message of sucess $/) do 
+  expect(page).to have_content 'Seu usuário foi cadastrado com sucesso!'
+end
+
+# CENARIO 3 ----------------------------------------------------------------------------------------------
+
+Given(/^I'm in the registration module $/) do
+  visit '/register'
+end
+
+When(/^When I fill the fields "phone number", "facebook_link", "bio" $/) do 
+  fill_in 'phone_number', :with => "81998052857"
+  fill_in 'facebook_link', :with => "facebook.com/cristina.antunes"
+  fill_in 'bio', :with => "Eu quero aprender com a plataforma a aprimorar meus conhecimentos"
+
+Then(/^The button "Register" shall be disabled $/) do 
+  expect(page).to have_button('Cadastrar', disabled: true)
 end
 
 
-Dado('que o usuário esteja na página inicial do site') do
-  @driver = Selenium::WebDriver.for :chrome
-  @driver.get 'http://www.comoequee.com.br'
-  sleep 3
+# CENARIO 4 ----------------------------------------------------------------------------------------------
+
+Given(/^I'm in the registration module $/) do
+  visit '/register'
 end
 
-Quando('clicar no botão cadastrar') do
-  tuto = Page.new
-  tudo.clickOnCadastro()
+When(/^I fill the fields: name, email, phone, password, password_confirmation, facebook_link$/) do 
+  fill_in 'name', :with => "Cristina Antunes"
+  fill_in 'email', :with => "cristina_antunes@gmail"
+  fill_in "phone_number", :with => "81998052857"
+  fill_in 'password', :with => "123456"
+  fill_in 'password_confirmation', :with => "123456"
+  fill_in 'facebook_link', :with => "facebook.com/cristina.antunes"
+  fill_in 'bio' :with => "Eu quero aprender com a plataforma a aprimorar meus conhecimentos"
+
+And(/^press the button Cadastrar $/) do 
+  page.find(:signup, 'Cadastrar')
 end
 
-Então('será redirecionado para página de cadastro') do
-  register = Page.new
-  register.register()
+Then(/^the system shall show a pop-up  with a message of sucess$/) do 
+  expect(page).to have_content 'Seu usuário foi cadastrado com sucesso!'
 end
 
-Quando('preencher todos os campos') do
-  page = Page.new
-  page = check.checkTheData()
-  if page == true
-    page.clickOnRegister()
-  else
-    page.errorData()
-  end
+
+# CENARIO 5 ----------------------------------------------------------------------------------------------
+
+Given(/^I'm in the registration module $/) do
+  visit '/register'
 end
 
-Entao('o cadastro será realizado') do
-  page = Page.new
-  page.msgRegister
+When(/^When I press the button "Entrar" $/) do 
+  page.find(:signin, 'Entrar')
+  
+Then(/^The button "Register" shall be disabled $/) do 
+  expect(page).to have_current_path(register_path(search: 'login'))
 end
 
-Given /^I'm in the registration module$/ do
-  visits new_session_path
-  fills_in "name", :with=> "Cristina Antunes"
-  fills_in "email", :with => "cristina_antunes@gmail.com"
-  fills_in "phone number", :with => "81998052857"
-  fills_in "password", :with => "123456"
-  fills_in "password_confirmation", :with => "123456"
-  fills_in "facebook_link", :with => "facebook.with/cristina.antunes"
-  fills_in "bio", :with => "Eu quero aprender com a ajuda deste aplicativo e desenvolver meus conhecimentos"
-  clicks_button "Sign up"
+
+# CENARIO 6 ----------------------------------------------------------------------------------------------
+
+Given(/^I'm in the registration module $/) do
+  visit '/register'
+end
+
+When(/^When I fill the fields "name", "email", "password", "password_confirmation" $/) do 
+  fill_in 'name', :with => "Cristina Antunes"
+  fill_in 'email', :with => "cristina_antunes@gmail"
+  fill_in 'password', :with => "123456"
+  fill_in 'password_confirmation', :with => "098765"
+
+And(/^press the button Cadastrar $/) do 
+  page.find(:signup, 'Cadastrar')
+end
+
+Then(/^the system shall show a message of error $/) do 
+  expect(page).to have_content 'As senhas digitadas não coincidem'
 end
