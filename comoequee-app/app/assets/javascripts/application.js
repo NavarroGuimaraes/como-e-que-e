@@ -14,9 +14,12 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-var btn = document.getElementById("see-tutorials")
-
-
-btn.addEventListener('click', function() {
-     alert('deu bom')
-})
+function toggleMenu(btn) {
+  var toggleList = document.querySelector('.toggle-menu__list');
+  var display = toggleList.style.display
+  if (display == 'none') {
+    toggleList.style.display = 'flex';
+  } else {
+    toggleList.style.display = 'none';
+  }
+};
