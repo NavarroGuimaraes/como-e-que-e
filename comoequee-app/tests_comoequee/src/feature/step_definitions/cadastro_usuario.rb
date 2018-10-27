@@ -42,3 +42,15 @@ Entao('o cadastro será realizado') do
   page = Page.new
   page.msgRegister
 end
+
+Given /^I'm in the registration module$/ do
+  visits new_session_path
+  fills_in "name", :with=> "Cristina Antunes"
+  fills_in "email", :with => "cristina_antunes@gmail.com"
+  fills_in "phone number", :with => "81998052857"
+  fills_in "password", :with => "123456"
+  fills_in "password_confirmation", :with => "123456"
+  fills_in "facebook_link", :with => "facebook.with/cristina.antunes"
+  fills_in "bio", :with => "Eu quero aprender com a ajuda deste aplicativo e desenvolver meus conhecimentos"
+  clicks_button "Sign up"
+end
