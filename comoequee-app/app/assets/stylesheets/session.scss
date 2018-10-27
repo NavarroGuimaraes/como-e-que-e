@@ -31,15 +31,20 @@
     justify-content: flex-end;
     align-items: center;
     min-width: 50%;
-    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .api-login{
     display: flex;
-    justify-contain: flex-end;
+    justify-content: center;
     flex-direction: column;
+
     min-height: 350px;
     min-width: 50%;
+}
+
+.api{
+
 }
 
 .up{
@@ -54,6 +59,35 @@
     height: 120px;
     
     
+}
+
+
+#form_login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 250px;
+}
+
+.field_name{
+    width: 200px;
+}
+
+.field_email{
+    width: 200px;
+}
+
+
+.btn_send{
+    width: 204px;
+    border-style: none;
+    font-weight: bolder;
+    font-family: Open Sans;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    background-color: #048CB4;
 }
 
 
