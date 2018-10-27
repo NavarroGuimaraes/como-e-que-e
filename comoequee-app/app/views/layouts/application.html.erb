@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Como é que é?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+        <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+                <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
+    <!--Navbar-->
+
+    <nav class="navbar">
+        <div class="icon-nav">
+            <a href="#"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %>
+
+</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Como funciona</a></li>
+                <li><a href="#">Tutoriais</a></li>
+                <li><a href="#">Contato</a></li>
+                <li>
+                    <a href="#"> <b>Login</b></a>
+                </li>
+                <li>
+                    <a href="#"> <b>Cadastro</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <%= yield %>
-  </body>
+        <!--Footer-->
+
+        <footer>
+            <div class="logo-footer">
+                <a href="#"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %></a>
+            </div>
+            <div class="menu-footer">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Como funciona</a></li>
+                    <li><a href="#">Tutoriais</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+
 </html>

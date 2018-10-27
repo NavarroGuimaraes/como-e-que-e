@@ -1,57 +1,57 @@
-#language: pt
+|#language: pt
 # encoding: utf-8
 
-Funcionalidade: testar o menu e todos os caminhos
+Feature: to test the menu and every possible path
 
-Para navegar de forma direta com poucos cliques a plataforma
-Como usuário do sistema
-Eu quero que o sistema possua um menu
+To navigate in fomw few clicks though the app
+As an user of the system
+I Want the system to have a menu
 
-  Cenário: Navegação inicio - Home
+  Scenario: Initial navigation - home
 
-    Dado que estou na tela Cadastro
-    Quando eu aperto o botão "início"
-    Então devo ver a tela Home
-      E devo ver o banner inicial do site
+    Given I'm in the register module
+    When I Press the button "início"
+    Then I shall see the Home page
+      And i shall see the initial app's banner 
 
-  Cenário: Navegação comoFunciona - Home
+  Scenario: Navigation comoFunciona - Home
 
-    Dado que estou na tela Cadastro
-    Quando eu aperto o botão "como funciona"
-    Então devo ver a tela Home
-      E devo ver o tópico Como Funciona?
+    Given I'm in the register module
+    When I press the button "como funciona"
+    Then I shall see the home page
+      And I shall see the topic Como Funciona?
 
-  Cenário: Navegação tutoriais - Home
+  Scenario: Navigation tutoriais - Home
 
-    Dado que estou na tela de Cadastro
-    Quando eu aperto o botão "tutoriais"
-    Então devo ver a tela Home
-      E devo ver o tópico Nossos Tutoriais
+    Given I'm in the register module
+    When I Press the button "tutoriais"
+    Then I Shall see the home page
+      And shall see the topic Nossos Tutoriais
 
-  Cenário: Navegação contato - Home
+  Scenario: Navigation contato - Home
 
-    Dado que estou na tela de Cadastro
-    Quando eu aperto o botão "contato"
-    Então devo ver a tela Home
-      E devo ver o tópico Contato
+    Given I'm in the register module
+    When I Press the button "contato"
+    Then I Shall see the home page
+      And shall see the topic Contato
 
-  Cenário: Navegação cadastro - Cadastro
+  Scenario: Navigation cadastro - Register
 
-    Dado que estou na tela Home
-    Quando eu aperto o botão "cadastro"
-    Então devo ver a tela de Cadastro
+    Given I'm in the home page
+    When I press the button "cadastro"
+    Then I shall see the Register module
 
   #Vai falhar pois não temos login
-  Cenário: Navegação login - Login
+  Scenario: Navigation login - Login
 
-    Dado que estou na tela Home
-    Quando eu aperto o botão "login"
-    Então devo ver a tela de Login do sistema
+    Given I'm in the home page
+    When I press the button "login"
+    Then I shall see the Login module
 
-  #Cenário ruim
-  Cenário: Navegação Meu Perfil - Home
+  #Scenario ruim
+  Scenario: Navigation Meu Perfil - Home
 
-    Dado que estou na tela Home
-      E meu usuário não está logado
-    Então eu não devo ver a opção meu perfil
-      E nem conseguir apertar esse botão
+    Given I'm in the home page
+      And my user is not logged in the app
+    Then I shall not see the option "Meu perfil"
+      And neither shall be able to press this button
