@@ -1,3 +1,122 @@
 // Place all the styles related to the Session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 50%;
+    
+    background-image: image-url('login.svg');
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 100px;
+    background-size: contain;
+}
+
+#login{
+    background-image: image-url('tutorials.svg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: -3px;
+    background-size: contain;
+}
+
+.login_accout{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 50%;
+    border-left: 1px solid black;
+}
+
+.api-login{
+    display: flex;
+    justify-contain: flex-end;
+    flex-direction: column;
+    min-height: 350px;
+    min-width: 50%;
+}
+
+.up{
+    display: flex;
+    flex-direction: row;
+}
+
+.down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    
+    
+}
+
+
+/*
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#gg{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.register{
+    
+    min-width: 50%;
+    
+    background-image: image-url('login.svg');
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 100%;
+    background-size: contain;
+}
+
+.register div{
+    
+    min-width: 80%;
+    min-height: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#form_login{
+    
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+.api-login{
+    
+    min-width: 50%;
+    
+    background-image: image-url('tutorials.svg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: -3px;
+
+    background-size: contain; 
+}
+
+*/
