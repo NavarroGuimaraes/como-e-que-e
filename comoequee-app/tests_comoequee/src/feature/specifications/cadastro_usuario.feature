@@ -9,9 +9,9 @@ I want to do my registration in the application
 
 Scenario: Successful registration
   Given I'm in the registration module
-  When I fill the field "name" with "Cristina Antunes"
-    And fill the field "email" with "cristina_antunes@gmail"
-	  And fill the field "phone number" with "81998052857"
+  When I fill the field name
+    And fill the field email
+	And fill the field phone number
     And fill the field "password" with "123456"
     And fill the field "password_confirmation" with "123456"
     And fill the field "facebook_link" with "facebook.with/cristina.antunes"
