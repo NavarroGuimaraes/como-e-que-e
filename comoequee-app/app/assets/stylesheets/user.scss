@@ -1,3 +1,97 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Parte Esquerda da pagina Cadastro*/
+.form_register{
+    background-image: image-url('left_down.svg');
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 92px;
+    background-size: contain;
+}
+    
+/* espaçamento entre os forms*/
+form label{
+    margin-top: 5px;
+}
+
+
+.form_register_left{
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+#asterisk{
+    color: red;
+}
+
+#password_space{
+    margin-left: 17.5%;
+}
+
+.name_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 42.3%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.email_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 42.3%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.phone_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 42.3%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.password_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 20%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;  
+}
+
+.password_confirmation_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 20%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+    margin-left: 2%;
+}
+
+.facebook_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 42.3%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.biography{
+    weight: 10%;
+}
