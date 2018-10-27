@@ -14,3 +14,12 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+function toggleMenu(btn) {
+  var toggleList = document.querySelector('.toggle-menu__list');
+  var display = toggleList.style.display
+  if (display == 'none') {
+    toggleList.style.display = 'flex';
+  } else {
+    toggleList.style.display = 'none';
+  }
+};

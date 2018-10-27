@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Como é que é?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <!--Navbar-->
+
+    <nav class="navbar">
+        <div class="icon-nav">
+            <a href="/"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %>
+
+</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/index">Início</a></li>
+                <li><a href="/index#como-funciona">Como funciona</a></li>
+                <li><a href="/index#tutoriais">Tutoriais</a></li>
+                <li><a href="/index#contato">Contato</a></li>
+                <% if current_user %>
+                    <li><a href="/index"><b>Meu perfil</b></a></li>
+                    <li><a href="/logout"><b>Sair</b></a></li>
+                <% else %>
+                    <li><a href="/login"> <b>Login</b></a></li>
+                    <li><a href="/cadastro"> <b>Cadastro</b></a></li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="toggle-menu">
+            
+            <button class="toggle-btn" onclick="toggleMenu(this)">
+                <%= image_tag("toggle.svg", :alt => "toggle-menu") %>
+            </button>
+            
+            <ul class="toggle-menu__list">
+                <li><a href="/index">Início</a></li>
+                <li><a href="/index#como-funciona">Como funciona</a></li>
+                <li><a href="/index#tutoriais">Tutoriais</a></li>
+                <li><a href="/index#contato">Contato</a></li>
+                <% if current_user %>
+                    <li><a href="/index"><b>Meu perfil</b></a></li>
+                    <li><a href="/logout"><b>Sair</b></a></li>
+                <% else %>
+                    <li><a href="/login"> <b>Login</b></a></li>
+                    <li><a href="/cadastro"> <b>Cadastro</b></a></li>
+                <% end %>
+            </ul>
+        </div>
+    </nav>
+
     <%= yield %>
-  </body>
+        
+        <!--Footer-->
+        <footer>
+            <div class="logo-footer">
+                <a href="#"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %></a>
+            </div>
+            <div class="menu-footer">
+                <ul>
+                    <li><a href="/index">Início</a></li>
+                    <li><a href="/index#como-funciona">Como funciona</a></li>
+                    <li><a href="/index#tutoriais">Tutoriais</a></li>
+                    <li><a href="/index#contato">Contato</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+
 </html>

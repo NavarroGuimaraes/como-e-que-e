@@ -1,30 +1,30 @@
-#language: pt
+#language: EN
 # encoding: utf-8
 
-Funcionalidade: testar a listagem de cursos da aplicação
+Feature: Test the application's list of tutorials
 
-Para escolher um tutorial a fazer
-Como usuário do sistema
-Eu quero que o sistema me apresente uma listagem de todos os cursos
+To choose a tutorial to do
+As a user of the system
+I Want the system to show me a list of every tutorials that it has.
 
-  Cenário: Ver Mais tutoriais - Home
+  Scenario: Ver Mais tutorials - Home
 
-    Dado que estou na tela Home
-    Quando eu desço pela tela Home
-      E vejo o tópico Nossos tutoriais
-      E clico no botão "Ver Mais"
-    Então devo ver a listagem de tutoriais do sistema
+    Given I'm in home page
+    When I scroll Down through the home page
+      And I see the topic "Nossos tutoriais"
+      And I click on the button "Ver Mais"
+    Then I shall see the list of tutorials that the app has
 
-  Cenário: Listar tutoriais pelo menu
+  Scenario: To list tutorials in the menu
   
-    Dado que estou na tela Home
-    Quado eu clico no botão "tutoriais"
-    Então devo ver a tela tutoriais com a listagem de tutoriais
+    Given I'm in home page
+    When I click on the button "tutoriais"
+    Then I shall see the tutorials module with the list of tutorials
 
-  Cenário: Paginação da lista
+  Scenario: List pagination
 
-    Dado que estou na tela de Tutoriais
-    Quando eu clico no botão "2"
-      E depois clico no botão "3"
-    Então devo ver a tela 2 de tutoriais
-      E devo ver a tela 3 de tutoriais
+    Given Tutorials module
+    When I click on the button "2"
+      And after that I click on the button "3"
+    Then I shall see the second page of tutorials
+      And I shall see the thrid page of tutorials

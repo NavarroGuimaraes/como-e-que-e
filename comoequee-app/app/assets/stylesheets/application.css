@@ -13,3 +13,168 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body {
+   margin: 0;
+   width: 100%;
+   border: none;
+ }
+
+ * {
+   outline: transparent;
+ }
+
+/*NAVBAR*/
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 0px 2px 8px #888888;
+    width: 100%;
+}
+
+.icon-nav img {
+    height: 100%;
+    max-width: 124px;
+    margin-top: 5px;
+    margin-left: 40%;
+    width: 80%;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu a {
+    color: black;
+    padding: 10px;
+}
+
+.menu a:hover {
+    color: #FD8F26;
+}
+
+.menu li {
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.toggle-menu {
+    display: none;
+}
+
+
+.toggle-btn {
+    margin-right: 10px;
+    font-size: 20px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-menu__list {
+    padding: 20px 0;
+    position: absolute;
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    background-color: white;
+    top: 50px;
+    right: 0px;
+    width: 100vw;
+    z-index: 1;
+}
+
+.toggle-menu li {
+    text-align: center;
+}
+
+.toggle-menu a, .toggle-menu a:visited, .toggle-menu a:link {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+        position: relative;
+    }
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #DDE1E2;
+}
+
+div.logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+div.menu-footer {
+    margin-right: 60px;
+}
+
+.logo-footer a img {
+    /*altura*/
+    height: 76.4px;
+    /*largura*/
+    width: 124.8px;
+    margin-left: 30px;
+}
+
+footer li {
+    list-style: none;
+    color: black;
+}
+
+footer li a {
+    text-decoration: none;
+    color: black;
+}
+
+footer li a:hover {
+    color: #FD8F26;
+}
+
+/*BREAKPOINTS*/
+@media only screen and (max-width: 768px) {
+    
+    /*MENU*/
+    .menu li {
+        margin: 2px;
+    }
+    
+}
