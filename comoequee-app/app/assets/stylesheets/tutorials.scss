@@ -1,3 +1,87 @@
 // Place all the styles related to the Tutorials controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tutorials-list {
+  margin: 50px auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-tutorial {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    min-width: 200px;
+    width: calc(90% - 20px);
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+  }
+
+  &__submit {
+    height: 40px;
+    width: calc(10% - 20px);
+    min-width: 75px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    background-color: #048CB4;
+  }
+}
+
+.tutorials {
+  margin: 40px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  a {
+    text-decoration: none;
+  }
+
+  &__tutorial {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 3px 20px rgba(0,0,0, 0.15);
+      border-radius: 200px;
+    }
+
+    figcaption {
+      margin-top: 5px;
+      font-weight: thin;
+      font-size: 15pt;
+      color: black;
+    }
+  }
+}
+
+.pagination {
+  em {
+    font-style: normal;
+  }
+
+  a, a:link, a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  .current {
+    color: #FD8F26;
+    font-weight: bold;
+  }
+}
