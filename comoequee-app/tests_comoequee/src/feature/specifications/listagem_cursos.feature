@@ -1,33 +1,30 @@
-#language: pt
+#language: EN
 # encoding: utf-8
 
-Funcionalidade: testar a listagem de cursos da aplicação
+Feature: Test the application's list of tutorials
 
-#-------------------------------- DESCRIÇÃO DO CENÁRIO --------------------------------------
-#Para escolher um tutorial a fazer
-#Como usuário do sistema
-#Eu quero que o sistema me apresente uma listagem de todos os cursos
+To choose a tutorial to do
+As a user of the system
+I Want the system to show me a list of every tutorials that it has.
 
-Contexto: listar os tutoriais disponíveis na plataforma
-Dado que usuário queira escolher um tutorial para realizar
+  Scenario: Ver Mais tutorials - Home
 
-#--------------------------------------------------------------------------------------------
+    Given I'm in home page
+    When I scroll Down through the home page
+      And I see the topic "Nossos tutoriais"
+      And I click on the button "Ver Mais"
+    Then I shall see the list of tutorials that the app has
 
-  @listagem_cursos
-  Esquema do Cenário: listar os tutoriais disponíveis para o usuário
+  Scenario: To list tutorials in the menu
+  
+    Given I'm in home page
+    When I click on the button "tutoriais"
+    Then I shall see the tutorials module with the list of tutorials
 
-#------------------------------------- Home -------------------------------------------------
+  Scenario: List pagination
 
-  Então Home - Acessar Tutoriais
-  Então Utils - Capturar Evidencia
-  Então Home - Clicar Ver Mais
-  Então Utils - Capturar Evidencia
-#--------------------------------------------------------------------------------------------
-
-#------------------------------------- Tutoriais --------------------------------------------
-
-  Então Tutoriais - Clicar Próxima Página
-  Então Utils - Capturar Evidencia
-  Então Tutoriais - Clicar Próxima Página
-  Então Utils - Capturar Evidencia
-#--------------------------------------------------------------------------------------------
+    Given Tutorials module
+    When I click on the button "2"
+      And after that I click on the button "3"
+    Then I shall see the second page of tutorials
+      And I shall see the thrid page of tutorials
