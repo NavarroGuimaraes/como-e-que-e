@@ -1,4 +1,6 @@
-=begin
+<% if false %>
+
+
 
 <%= form_tag '/login' do %>
 
@@ -8,15 +10,9 @@
 
 <% end %>
 
-=end
+<!--
 
-
-
-<section class="login">
-    <div>
-    <div class="register">
-        
-            <form id="form" autocomplete="off">
+            <form id="form_login" autocomplete="off">
                 <label>Nome</label>
                 <br>
                 <input class="field_name" type="text" placeholder="  Digite seu nome"><br>
@@ -24,15 +20,55 @@
                 <br>
                 <input class="field_email" type="password" placeholder="  Digite seu email">
             </form>
-        
+            
+-->
+
+<% end %>
+
+
+
+<section class="login">
+    
+    
+<div id="login">    
+  <div class="up">
+    <div class="login_accout">
+      
+              <form id="form_login" autocomplete="off">
+                  <label>Nome</label>
+                  <br>
+                  <input class="field_name" type="text" placeholder="  Digite seu nome"><br>
+                  <label>Senha</label>
+                  <br>
+                  <input class="field_email" type="password" placeholder="  Digite seu email">
+                  <input class="btn_submit" type="submit" value="Enviar">
+              </form>
+      
     </div>
+    
+    
     <div class="api-login">
-        
-    </div>
+      <p>Google</p>
+      <p>Facebook</p>
     </div>
     
-    <div class="text"></div>
     
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="down">
+    <p>Não tem uma conta? Faça seu cadastro</p>
+  </div>
+
+
+</div>  
 </section>
 
 
