@@ -1,3 +1,5 @@
+<% if false %>
+
 <%= form_for :user, url: "/cadastro" do |f| %>
 
   Name: <%= f.text_field :name %>
@@ -7,3 +9,43 @@
   <%= f.submit "Submit" %>
 
 <% end %>
+
+<% end %>
+
+<section class = "form_register">
+	<div class = "form_register_left">
+		<p><span id="asterisk">*</span> Campos obrigatórios</p>
+		
+		<form class="form" autocomplete="off">
+            <label>Nome <span id="asterisk">*</span></label><br>
+            <input class="name_field_register" type="text" placeholder="  ex: Cristina Antunes"><br>
+            
+            <label>Email <span id="asterisk">*</span></label><br>
+            <input class="email_field_register" type="text" placeholder="  ex: email@gmail.com"><br>
+            
+            <label>Telefone </label><br>
+            <input class="phone_field_register" type="text" placeholder="  ex: (81)99999-9999"><br>
+           
+            <label>Senha <span id="asterisk">*</span> </label>
+            <label id="password_space">Confirme sua senha <span id="asterisk">*</span></label><br>
+            <input class="password_field_register" type="text" placeholder=" ********"> 
+            <input class="password_confirmation_register" type="text" placeholder=" ********"><br>
+            
+            <label>Link para o facebook</label><br>
+            <input class="facebook_field_register" type="text" placeholder=" ex: facebook.com/cristina-antunes"><br>
+            
+        </form>
+
+	</div>
+	
+	
+	<div class:"form_for_register">
+	  
+	  
+	</div>
+
+
+</section>
+
+
+
