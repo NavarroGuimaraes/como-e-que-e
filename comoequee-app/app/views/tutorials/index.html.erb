@@ -1,14 +1,19 @@
-<section> 
-  <form method="GET">
-    <input name="search">
-    <input type="submit">
-  <form>
+<section class="tutorials-list"> 
+  <form method="GET" class="search-tutorial">
+    <input name="search" class="search-tutorial__input" placeholder=" Digite um tutorial de interesse">
+    <input type="submit" value="pesquisar" class="search-tutorial__submit">
+  </form>
   <div class="tutorials">
     <% for @tutorial in @tutorials %>
-      <figure>
+    <a href="#">
+      <figure class="tutorials__tutorial">
         <img src="">
-        <figcaption><%= @tutorial %></figcaption>
+        <figcaption><%= @tutorial.name %></figcaption>
       </figure>
+    </a>
     <% end %>
+  </div>
+  <div class="pagination">
+    <%= will_paginate @tutorials %>
   </div>
 </section>

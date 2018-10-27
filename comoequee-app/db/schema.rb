@@ -10,9 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_10_21_174654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "chapters", force: :cascade do |t|
+    t.integer "number"
+    t.string "name"
+    t.integer "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "tutorial_id"
+    t.index ["tutorial_id"], name: "index_chapters_on_tutorial_id"
+  end
+
+  create_table "contents", force: :cascade do |t|
+    t.integer "number"
+    t.string "name"
+    t.text "instruction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "chapter_id"
+    t.index ["chapter_id"], name: "index_contents_on_chapter_id"
+  end
+
+  create_table "tutorials", force: :cascade do |t|
+    t.string "name"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "facebook"
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
+  end
+
+  add_foreign_key "chapters", "tutorials"
+  add_foreign_key "contents", "chapters"
 end
