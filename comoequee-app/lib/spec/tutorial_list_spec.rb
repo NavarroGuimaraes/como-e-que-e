@@ -1,8 +1,10 @@
-describe TutorialList do
-    context 'get tutorial' do
-        it 'get tutorial list' do
-            test1 = TutorialList.new
-            expect(test1.TutorialList()).to eql (!= Null)
+require "tutorials_controller"
+describe TutorialsController do
+    context 'get tutorial in order' do
+        it 'get tutorial list in order' do
+        expect(TutorialsController.index()).kind_of (Array)
         end
     end
-    
+end
+
+
