@@ -31,15 +31,18 @@
     
     
 <div id="login">    
-  <div class="up">
+  <div class="div-up">
     <div class="login_accout">
       
               <form id="form_login" autocomplete="off">
-                  <label>Nome</label>
-                  <input class="field_name" type="text" placeholder="  Digite seu nome">
-                  <label>Senha</label>
-                  <input class="field_email" type="password" placeholder="  Digite sua senha">
+                  <label for="name_user">Nome</label>
+                  <input type="text" id="name_user" name="name" placeholder="  Digite seu nome">
+                  <label for="password_user">Senha</label>
+                  <input type="password" id="password_user" name="password" placeholder="  Digite sua senha">
+
+                  <a href="#">Esqueci minha senha</a>
                   <input class="btn_send" type="submit" value="acessar minha conta">
+                  
               </form>
       
     </div>
@@ -55,16 +58,10 @@
     
   </div>
   
+
   
-  
-  
-  
-  
-  
-  
-  
-  <div class="down">
-    <p>Não tem uma conta? Faça seu cadastro</p>
+  <div class="div-down">
+    <p>Não tem uma conta? <a href="#"><b>Faça seu cadastro</b></a></p>
   </div>
 
 
