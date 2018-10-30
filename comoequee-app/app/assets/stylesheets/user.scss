@@ -5,19 +5,19 @@
 
 /* Parte Esquerda da pagina Cadastro*/
 .form_register{
-    background-image: image-url('left_down.svg');
+    background-image: image-url('left_down.svg'), image-url('right_top.svg');
     background-repeat: no-repeat;
-    background-position-x: 0%;
-    background-position-y: 105px;
+    background-position-x: 0%, 100%;
+    background-position-y: 105px, -20px;
     background-size: contain;
-    
+
     /*background-image: image-url('right_top.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: 100%;
     background-position-y: 30%;*/
 }
-    
+
 /* espaçamento entre os forms*/
 .form label{
     margin-top: 5px;
@@ -75,7 +75,7 @@
     width: 40.2%;
     border-radius: 7px;
     border: none;
-    background-color: #EBEBEB;  
+    background-color: #EBEBEB;
 }
 
 .password_confirmation_register{
@@ -134,7 +134,7 @@
     border-radius: 7px;
     border: none;
     color: white;
-    
+
 }
 
 .register_button{
@@ -145,7 +145,7 @@
     border: none;
     border-radius: 7px;
     color: white;
-    
+
 }
 
 .text_do_login{
@@ -154,3 +154,12 @@
     font-family: Open Sans;
 }
 
+.text_do_login a{
+    text-decoration: none;
+    color: black;
+}
+
+.text_do_login a:hover{
+    color: #FD8F26;
+    
+}
