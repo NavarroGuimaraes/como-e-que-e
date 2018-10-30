@@ -1,82 +1,75 @@
 #language: pt
 # encoding: utf-8
 
-Feature: testar o acesso do usuário na plataforma 
+Feature: test the user access in the plataform
 
-Para entrar acompanhar os tutoriais
-Como usuário do sistema
-Eu quero ter como fazer meu login no sistema de diversas formas
+to folow up with the tutorials
+As a system user
+I want to do my login in many ways
 
-Scenario: Acesso com sucesso - Login - Email
-  Dado Que esteja na página de Login
-  Quando eu preencho o campo nome com "Cristina Antunes"
-    E preencho o campo senha com "123456"
-	  E quando eu clico no botão "acessar minha conta"
-  Então o sistema vai direcionar para a tela Meu Perfil
+Scenario: successful access - Login - Email
+  Given  I'm in login module
+  When I fill the fields name, password 
+	  And click on the button "acessar minha conta"
+  Then the app shall redirect me to Meu Perfil module
 
-Scenario: Acesso com sucesso - Login - Gmail
-  Dado Que esteja na página de Login
-  Quando eu clico o botão "Acessar com Gmail"
-    E preencho com email
-    E clico o botão "Next"
-	  E preencho com senha
-    E clico o botão "Next"
-  Então o sistema vai direcionar para a tela Meu Perfil
+Scenario: successful access - Login - Gmail
+  Given  I'm in the login module
+  When I click on the button "Acessar com Gmail"
+    And fill the field email and password
+    And click on the button "Next"
+  Then the app shall redirect me to to Meu Perfil module
 
-Scenario: Acesso com sucesso - Login - Facebook
-  Dado Que esteja na página de Login
-  Quando eu clico o botão "Acessar com Facebook"
-    E preencho com email
-	  E preencho com senha
-    E clico o botão "Log In"
-  Então o sistema vai direcionar para a tela Meu Perfil
+Scenario: successful access - Login - Facebook
+  Given  I'm in the login module
+  When I click on the button "Acessar com Facebook"
+    And fill the field email and password
+    And click on the button "Log In"
+  Then the app shall redirect me to to Meu Perfil module
 
-Scenario: Acesso sem o campo senha preenchido - Login - Email
-  Dado Que esteja na página de Login
-  Quando eu preencho o campo "nome" com "Cristina Antunes"
-	  E quando eu clico no botão "acessar minha conta"
-  Então o sistema vai exibir a mensagem: "Favor preencher o campo Senha"
+Scenario: Access with no password given - Login - Email
+  Given  I'm in the login module
+  When I fill the field name 
+	  And I click on the button "acessar minha conta"
+  Then the system shall show the message: "Favor preencher o campo Senha"
 
-Scenario: Acesso sem o campo nome preenchido - Login - Email
-  Dado Que esteja na página de Login
-  Quando eu preencho o campo "senha" com "123456"
-	  E quando eu clico no botão "acessar minha conta"
-  Então o sistema vai exibir a mensagem: "Favor preencher o campo Nome"
+Scenario: access with no name given - Login - Email
+  Given  I'm in the login module
+  When i fill the field password
+	  And I click on the button "acessar minha conta"
+  Then the system shall show the message: "Favor preencher o campo Nome"
 
-Scenario: Acesso com nome e senha divergente - Login - Email
-  Dado Que esteja na página de Login
-  Quando eu preencho o campo "nome" com "Cristina Antunes"
-    E preencho o campo "senha" com "11111111111"
-	  E quando eu clico no botão "acessar minha conta"
-  Então o sistema vai exibir a mensagem: "Usuário e/ou Senha incorretos, favor verificar"
+Scenario: access with wrong password or wrong user - Login - Email
+  Given  I'm in the login module
+  When I fill the field "nome" com "Cristina Antunes"
+    And I fill the field "senha" com "11111111111"
+	  And I click on the button "acessar minha conta"
+  Then the system shall show the message: "Usuário e/ou Senha incorretos, favor verificar"
 
-Scenario: Acesso conta gmail(email) inválida - Login - Gmail
-  Dado Que esteja na página de Login
-  Quando eu clico o botão "Acessar com Gmail"
-    E preencho com email inválido
-    E clico o botão "Next"	  
-  Então o sistema vai exibir a mensagem: "Couldn't find your Google Account"
+Scenario: access a invalid email - Login - Gmail
+  Given  I'm in the login module
+  When I click on the button "Acessar com Gmail"
+    And fill the field with an invalid email
+    And click on the button "Next"	  
+  Then the system shall show the message: "Couldn't find your Google Account"
 
-Scenario: Acesso conta gmail(senha) inválida - Login - Gmail
-  Dado Que esteja na página de Login
-  Quando eu clico o botão "Acessar com Gmail"
-    E preencho com email
-    E clico o botão "Next"
-    E preencho com senha inválida
-    E clico o botão "Next"
-  Então o sistema vai exibir a mensagem: "Wrong password. Try again or click Forgot password to reset it."
+Scenario: access a email with the wrong password - Login - Gmail
+  Given  I'm in the login module
+  When I click on the button "Acessar com Gmail"
+    And fill the field email and the field password
+    And click on the button "Next"
+  Then the system shall show the message: "Wrong password. Try again or click Forgot password to reset it."
 
-Scenario: Acesso conta facebook(senha) inválida - Login - Facebook
-  Dado Que esteja na página de Login
-  Quando eu clico o botão "Acessar com Facebook"
-    E preencho com email inválido
-    E clico o botão "Log In"    
-  Então o sistema vai exibir a mensagem: "The email you’ve entered doesn’t match any account. Sign up for an account."
+Scenario: access a email with the wrong password - Login - Facebook
+  Given  I'm in the login module
+  When I click on the button "Acessar com Facebook"
+    And fill the field with an invalid email 
+    And click on the button "Log In"    
+  Then the system shall show the message: "The email you’ve entered doesn’t match any account. Sign up for an account."
 
-Scenario: Acesso conta facebook(senha) inválida - Login - Facebook
-  Dado Que esteja na página de Login
-  Quando eu clico o botão "Acessar com Facebook"
-    E preencho com email válido
-    E clico o botão "Log In"
-    E preencho com senha inválida    
-  Então o sistema vai exibir a mensagem: "The password you’ve entered is incorrect. Forgot Password?"
+Scenario: access an invalid e-mail - Login - Facebook
+  Given  I'm in the login module
+  When I click on the button "Acessar com Facebook"
+    And fill the field email valid and the field password with an invalid password
+    And click on the button "Log In"
+  Then the system shall show the message: "The password you’ve entered is incorrect. Forgot Password?"
