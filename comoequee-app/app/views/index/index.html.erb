@@ -1,17 +1,8 @@
-<section class="tutorials">
+<section class="tutorials-cto">
     <div class="message">
-        <div class="text">
         <h1>Venha conhecer nossos tutoriais e descubra como usar algumas das ferramentas mais utilizadas</h1>
-        </div>
-    </div>
-    
-    
-    <div id="div-button">
-        <div class="button-tutorials">
         <button id="see-tutorials">Conhecer tutoriais</button>
-        </div>
     </div>
-    
     <div id="div-down">
         <%= image_tag("down-arrows.svg", :alt => "logo-arrow", :class => "down-arrows") %></a>
         <p>Entenda<br> como funciona</p>
@@ -21,7 +12,7 @@
 
 
 
-<section class="how-function">
+<section class="how-function" id="como-funciona">
     <p id="title"><b>Como funciona</b></p>
     
     <div class="image-function">
@@ -39,7 +30,7 @@
 
 
 
-<section class="our-tutorials">
+<section class="our-tutorials" id="tutoriais">
     <p id="title"><b>Nossos tutoriais</b></p>
     
     <div class="image-tutorials">
@@ -71,7 +62,7 @@
     </div>
     
     <div id="see-more">
-        <a href="#">Veja mais</a>
+        <a href="/tutoriais">Veja mais</a>
         <%= image_tag("see-more-triangle.svg", :alt => "left-arrow", :class => "arrows") %>
     </div>
 
@@ -83,14 +74,14 @@
 
 
 
-<section class="contact">
+<section class="contact" id="contato">
     <div id="text">
         <p id="title"><b>Entre em<br> contato conosco</b></p>
         <p>Tem alguma dúvida?<br>Deseja algum curso?</p>
     </div>
     
     <div id="form">
-        <form id="formulario" autocomplete="off">
+        <form id="formulario">
             <label>Nome</label>
             <br>
             <input class="campo_nome" type="text" placeholder="  Digite seu nome"><br>
