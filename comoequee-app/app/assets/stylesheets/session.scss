@@ -125,7 +125,69 @@ label{
 }
 
 
+/*Check-email*/
 
+.modal-email{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(00,00,00,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.box-email {
+    max-width: 350px;
+    background: white;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.box-email__close {
+    background: none;
+    border-style: none;
+    margin-left: 6px;
+}
+
+.box-email__text h1{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-email__text p{
+    text-align: center;
+}
+
+
+.box-email__login p{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #c4c4c4;
+    padding: 15px;
+    margin: 0px;
+}
+
+.box-email__login b{
+    color: black;
+    text-decoration: none;
+}
+
+.box-email__login b:hover{
+    color: #FD8F26;
+    text-decoration: none;
+}
+
+.box-email__login a{
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+
+
+
+
+/*RESPONSIVIDADE*/
 @media only screen and (max-width: 606px){
     
     #form_login{
