@@ -128,6 +128,8 @@ label{
 /*Check-email*/
 
 .modal-check-email{
+    position: absolute;
+    height: 104%;
     display: flex;
     flex-direction: column;
     background-color: rgba(00,00,00,0.5);
@@ -186,6 +188,8 @@ label{
 /*Insert Email*/
 
 .modal-insert-email{
+    position: absolute;
+    height: 104%;
     display: flex;
     flex-direction: column;
     background-color: rgba(00,00,00,0.5);
@@ -215,8 +219,9 @@ label{
     border-radius: 3px;
     background: #EBEBEB;
     border: none;
-    width: 100%;
+    width: 97%;
     height: 50px;
+    padding-left: 10px;
 }
 
 .btn_submit-email{
@@ -244,6 +249,8 @@ label{
 
 
 .modal-new-password{
+    position: absolute;
+    height: 104%;
     display: flex;
     flex-direction: column;
     background-color: rgba(00,00,00,0.5);
@@ -265,6 +272,7 @@ label{
 }
 
 .text-box-insert-password {
+    padding-left: 10px;
     width: 95%;
     border-radius: 3px;
     background: #EBEBEB;
@@ -326,6 +334,7 @@ label{
 
 
 .text-box-insert-new__password {
+    padding-left: 10px;
     width: 45%;
     border-radius: 3px;
     background: #EBEBEB;
@@ -334,6 +343,7 @@ label{
 }
 
 .text-box-insert-confirm-new__password {
+    padding-left: 10px;
     width: 45%;
     border-radius: 3px;
     background: #EBEBEB;
