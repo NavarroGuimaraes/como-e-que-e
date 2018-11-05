@@ -1,4 +1,6 @@
-<h1>Login</h1>
+<% if false %>
+
+
 
 <%= form_tag '/login' do %>
 
@@ -7,3 +9,65 @@
   <%= submit_tag "Submit" %>
 
 <% end %>
+
+<!--
+
+            <form id="form_login" autocomplete="off">
+                <label>Nome</label>
+                <br>
+                <input class="field_name" type="text" placeholder="  Digite seu nome"><br>
+                <label>Senha</label>
+                <br>
+                <input class="field_email" type="password" placeholder="  Digite seu email">
+            </form>
+            
+-->
+
+<% end %>
+
+
+
+<section class="login">
+    
+    
+<div id="login">    
+  <div class="div-up">
+    <div class="login_accout">
+      
+              <form id="form_login" autocomplete="off">
+                  <label for="name_user">Nome</label>
+                  <input type="text" id="name_user" name="name" placeholder="  Digite seu nome">
+                  <label for="password_user">Senha</label>
+                  <input type="password" id="password_user" name="password" placeholder="  Digite sua senha">
+
+                  <a href="#">Esqueci minha senha</a>
+                  <input class="btn_send" type="submit" value="acessar minha conta">
+                  
+              </form>
+      
+    </div>
+    
+    
+    <div class="api-login">
+      <div clas="api">
+        <p>Google</p>
+        <p>Facebook</p>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+
+  
+  <div class="div-down">
+    <p>Não tem uma conta? <a href="#"><b>Faça seu cadastro</b></a></p>
+  </div>
+
+
+</div>  
+</section>
+
+
+
+
