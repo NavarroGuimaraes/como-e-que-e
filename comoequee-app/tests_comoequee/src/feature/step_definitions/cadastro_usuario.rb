@@ -1,6 +1,4 @@
-# encoding: utf-8
-#
-
+#Empty 
 # CENARIO 1 ----------------------------------------------------------------------------------------------
 
 Given(/^I'm in the registration module $/) do
