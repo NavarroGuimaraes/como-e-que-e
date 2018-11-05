@@ -6,21 +6,18 @@ As a system user
 I want the system to have a contact form which I'd be able to fill and make contact with the adminstrators
 
   Scenario: Make contact with empty fields - Home
-
      Given I'm in the contatoHome page 
      When I click on the button Enviar
      Then the system shall show a message "Favor preencher os campos da parte de Contato"
      
 
   Scenario: successful contact - Home
-
     Given I'm in the contatoHome page 
     When I fill all fields
       And I click on the button Enviar
     Then the system shall show a message "Contato realizado with sucesso, aguarde um retorno no email informado no prazo de até 5 dias utéis"
 
   Scenario: contact with no e-mail - Home
-
     Given I'm in the contatoHome page 
     When I fill the field Nome 
       And I fill the field Descrição 
