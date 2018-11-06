@@ -90,6 +90,21 @@
 
 /*Course not found*/
 
+/*button search voice*/
+
+.search-tutorial__voice{
+    margin-left: 5px;
+    margin-right: 5px;
+    min-width: 26px;
+    border: none;
+    background-color: white;
+    background-image: image-url('icon_voice');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 6px;
+
+}
+
 .course-not-found{
     background-image: image-url('tutorials_left.svg'), image-url('tutorials_right.svg');
     background-repeat: no-repeat;
