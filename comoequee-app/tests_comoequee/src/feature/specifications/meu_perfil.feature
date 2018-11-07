@@ -1,44 +1,46 @@
 # encoding: utf-8
 
-Feature: testar o acesso ao 'Meu Perfil' do usuário logado
+Feature: test the access to the 'Meu Perfil' page of the logged in user 
+        
 
+I'd like to view my progress in the tutorials i've been doing. Also, to see the tutotials i have already finished and some tutorials indications
 Gostaria visualizar o andamento de meus cursos, cursos já concluídos e indicação de alguns cursos
-Como usuário do sistema
-Gostaria de ter uma página de perfil
+As a user of the system
+I'd like to have a 'Meu perfil' page
 
 
 @meuperfil_editar
-Scenario: Estou no Meu Perfil e verifiquei uma informação incorreta
-  Given Que estou na tela de Meu Pefil
-  When Eu clico no botão "editar"
-  Then O sistema irá me direcionar para a tela de Editar Perfil
+Scenario: I'm on my profile and i saw an incorrect information
+  Given That i'm on my profile page
+  When I click the button "editar"
+  Then The system shall show the 'Editar Perfil' module 
   
 @meuperfil_emblema 
-Scenario: Estou no Meu Perfil e desejo saber o que significa o emblema no perfil
-  Given Que estou na tela de Meu Pefil
-  When Eu clico no botão "?"
-  Then O sistema irá exibir um pop-up com a informação sobre o que significa o emblema no perfil
+Scenario: I'm on my profile and i want to know what the emblem in my profile means
+  Given That i'm on my profile page
+  When I click the button "?"
+  Then The System shall show a pop-up explaining the meanings of the badges on my profile
   
 @meuperfil_cursosandamento  
-Scenario: Estou no Meu Perfil e desejo ver todos meus cursos em andamento
-  Given Que estou na tela de Meu Pefil
-  When Eu clico no botão "veja mais"
-  Then O sistema irá exibir todos os cursos em andamento do usuário
+Scenario: I'm on my profile and i want to see all my courses in progress
+  Given That i'm on my profile page
+  When I click the button "veja mais"
+  Then The system shall show all my tutorials in progress 
   
 @meuperfil_cursosconcluidos    
-Scenario: Estou no Meu Perfil e desejo ver meus cursos já concluídos
-  Given Que estou na tela de Meu Pefil
-  When Eu localizo o tópico "Relembre alguns assuntos"
-    And Clico na seta "para direita"
-    And Clico na seta "para esquerda"
-  Then A lista de cursos irá deslizar para o lado esquerdo da tela
-    Then A lista de cursos irá deslizar para o lado direito da tela
+Scenario: I'm on my profile and i want to see the courses i've already completed
+  Given That i'm on my profile page
+  When I find the topic "Relembre alguns assuntos"
+    And lick on the arrow "para direita"
+    And lick on the arrow "para esquerda"
+  Then The tutorials list shall slide to the left side
+    Then The tutorials list shall slide to the right side
     
 @meuperfil_cursosindicados
-Scenario: Estou no Meu Perfil e desejo ver algumas indicações de cursos
-  Given Que estou na tela de Meu Pefil
-  When Eu localizo o tópico "Tem vontade de aprender mais coisas?"
-    And Clico na seta "para direita"
-    And Clico na seta "para esquerda"
-  Then A lista de cursos irá deslizar para o lado esquerdo da tela
-    Then A lista de cursos irá deslizar para o lado direito da tela
+Scenario: I'm on my profile and i want to see some course indications
+  Given That i'm on my profile page
+  When I find the topic "Tem vontade de aprender mais coisas?"
+    And lick on the arrow "para direita"
+    And lick on the arrow "para esquerda"
+  Then The tutorials list shall slide to the left side
+    Then The tutorials list shall slide to the right side

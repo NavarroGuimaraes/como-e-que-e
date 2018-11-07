@@ -1,38 +1,38 @@
 # encoding: utf-8
 
-Feature: testar pesquisa por nome de tutorial
+Feature: test the seach using the tutorial's name
 
-Gostaria de localizar rapidamente tutoriais que eu já saiba o nome
-Como usuário do sistema
-Gostaria de pesquisar por nome algum tutorial
+I'd like to quickly locate a tutorial
+As an user of the system
+I'd like to seach using the name of the tutorial
 
 
 @pesquisanome_seminformacao
-Scenario: Estou fazendo uma pesquisa sem informar o curso
-  Given Que estou na tela de Tutoriais
-  When Clico no botão "pesquisar"
-  Then O sistema irá exibir uma mensagem: "Favor informar o curso que deseja buscar."
+Scenario: I'm searching withou putting any names on it
+  Given I'm in tutorials module
+  When click on the button "pesquisar"
+  Then the system shall show the following message: "Favor informar o curso que deseja buscar."
   
 @pesquisanome_cursoinexistente  
-Scenario: Estou fazendo uma pesquisa com um curso inexistente
-  Given Que estou na tela de Tutoriais
-  When Eu preencho o campo "pesquisa" com curso inexistente
-    And Clico no botão "pesquisar"
-  Then O sistema irá exibir uma mensagem: "Poxa, não encontrou o que procurava? Clica aqui e entre em contato conosco!!"
+Scenario: I'm searching with an nonexistent tutorial
+  Given I'm in tutorials module
+  When I fill the field "pesquisa" with an nonexistent tutorial
+    And click on the button "pesquisar"
+  Then the system shall show the following message: "Poxa, não encontrou o que procurava? Clica aqui e entre em contato conosco!!"
   
 @pesquisanome_cursoexistente    
-Scenario: Estou fazendo uma pesquisa com um curso existente
-  Given Que estou na tela de Tutoriais
-  When Eu preencho o campo pesquisa com curso existente
-    And Clico no botão "pesquisar"
-  Then O sistema irá exibir o curso pesquisado pelo usuário
+Scenario: I'm searching an existent tutorial
+  Given I'm in tutorials module
+  When I fill the field "pesquisa" with an existent tutorial
+    And click on the button "pesquisar"
+  Then The system shall show the tutorial seached by the user
   
 @pesquisanome_cursoinexistentecontato    
-Scenario: Não encontrei o curso e desejo entrar em contato
-  Given Que estou na tela de Tutoriais
-  When Eu preencho o campo "pesquisa" com curso inexistente
-    And Clico no botão "pesquisar"
-    And Clico no link "clique aqui"
-  Then O sistema irá exibir uma mensagem: "Poxa, não encontrou o que procurava? Clica aqui e entre em contato conosco!!"
-    Then O sistema irá direcionar para a tela de Contato 
+Scenario: I didn't find the tutorial and I want to make contact
+  Given I'm in tutorials module
+  When I fill the field "pesquisa" with a nonexistent tutorial
+    And click on the button "pesquisar"
+    And click on the link "clique aqui"
+  Then the system shall show the following message: "Poxa, não encontrou o que procurava? Clica aqui e entre em contato conosco!!"
+    And The system will redirect me to the contact module
   
