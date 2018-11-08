@@ -16,44 +16,45 @@
 	<div class = "form_register_left">
 		<p><span id="asterisk">*</span> Campos obrigatórios</p>
 		
-		<form class="form" autocomplete="off">
+		<form class="form" method="POST" action="/cadastro" autocomplete="off">
             <label>Nome <span id="asterisk">*</span></label><br>
-            <input class="name_field_register" type="text" placeholder="  ex: Cristina Antunes"><br><br>
+            <input class="name_field_register" type="text" name="user[name]" placeholder="  ex: Cristina Antunes"><br><br>
             
             <label>Email <span id="asterisk">*</span></label><br>
-            <input class="email_field_register" type="text" placeholder="  ex: email@gmail.com"><br><br>
+            <input class="email_field_register" type="email" name="user[email]" placeholder="  ex: email@gmail.com"><br><br>
             
             <label>Telefone </label><br>
-            <input class="phone_field_register" type="text" placeholder="  ex: (81)99999-9999"><br><br>
+            <input class="phone_field_register" type="text" name="user[phone]" placeholder="  ex: (81)99999-9999"><br><br>
            
             <label>Senha <span id="asterisk">*</span> </label>
             <label class="password_space">Confirme sua senha <span id="asterisk">*</span></label><br>
-            <input class="password_field_register" type="text" placeholder=" ********"> 
-            <input class="password_confirmation_register" type="text" placeholder=" ********"><br><br>
+            <input class="password_field_register" name="user[password]" type="password" placeholder=""> 
+            <input class="password_confirmation_register" name="user[password_confirmation]" type="password" placeholder=""><br><br>
             
             <label>Link para o facebook</label><br>
-            <input class="facebook_field_register" type="text" placeholder=" ex: facebook.com/cristina-antunes"><br>
+            <input class="facebook_field_register" type="text" name="user[facebook]" placeholder=" ex: facebook.com/cristina-antunes"><br>
             
           
-        </form>
+        
 
 	</div>
 	  
 	<div class="form_register_right">
-	  <input class="user_photo" name="myFile" type="file"><br><br><br>
+	  <input class="user_photo" name="" type="file"><br><br><br>
 	  <label>Biografia</label><br>
-    <textarea class="biography" cols="58" rows="12.5" placeholder="ex: Gosto de aprender coisas novas"></textarea><br>
+    <textarea class="biography" name="bio" cols="58" rows="12.5" placeholder="ex: Gosto de aprender coisas novas"></textarea><br>
 	  
 	</div>
-	
+	<%= flash[:error] %>
 	<div>
-	  <button class="cancel_button">cancelar</button>
-	  <button class="register_button">cadastrar</button><br>
+	  <button class="cancel_button"><a href="/login"> cancelar </a></button>
+	  <button class="register_button" type="submit">cadastrar</button><br>
 	
 	</div>
 
+  </form>
   <div class="text_do_login">
-    <p>Já tem um cadastro? <a href="#"><b>Faça seu Login</b></a></p>
+    <p>Já tem um cadastro? <a href="/login"><b>Faça seu Login</b></a></p>
   </div>
   
 </section>
