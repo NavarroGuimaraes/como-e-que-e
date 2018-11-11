@@ -17,18 +17,17 @@ Scenario: to test the chapters do tutorial
 Scenario: test the color changing in the chapters
   Given I'm in the tutorials home page
   When I click in a chapter of a tutorial
-    And I finish a chapter
     And I click in the button "proximo"
   Then the finished chapter whall have a different collor from the non-finished ones
   
 @tutorial_meuperfil   
-Scenario: Test the shortcutao meu perfil
+Scenario: Test the shortcut to meu perfil
   Given I'm in the tutorials home page
   When  I click no link "voltar ao perfil"
   Then O sistema irá direcionar para a tela meu perfil
   
 @tutorial_forum   
-Scenario: Test the shortcutto the forum
+Scenario: Test the shortcut to the forum
   Given I'm in the tutorials home page
   When I click no link "fazer uma pergunta"
   Then the system shall redirect me to the tutorials home page

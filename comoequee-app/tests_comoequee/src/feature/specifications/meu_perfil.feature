@@ -31,8 +31,8 @@ Scenario: I'm on my profile and i want to see all my courses in progress
 Scenario: I'm on my profile and i want to see the courses i've already completed
   Given That i'm on my profile page
   When I find the topic "Relembre alguns assuntos"
-    And lick on the arrow "para direita"
-    And lick on the arrow "para esquerda"
+    And click on the arrow "para direita"
+    And click on the arrow "para esquerda"
   Then The tutorials list shall slide to the left side
     Then The tutorials list shall slide to the right side
     
@@ -40,7 +40,7 @@ Scenario: I'm on my profile and i want to see the courses i've already completed
 Scenario: I'm on my profile and i want to see some course indications
   Given That i'm on my profile page
   When I find the topic "Tem vontade de aprender mais coisas?"
-    And lick on the arrow "para direita"
-    And lick on the arrow "para esquerda"
+    And click on the arrow "para direita"
+    And click on the arrow "para esquerda"
   Then The tutorials list shall slide to the left side
     Then The tutorials list shall slide to the right side
