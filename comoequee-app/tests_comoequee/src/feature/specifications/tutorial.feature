@@ -1,47 +1,46 @@
 # encoding: utf-8
 
-Feature: testar os tutoriais da aplicação
+Feature: to test the tutorials of the application
 
-Pois eu quero aprender a utilizá-las
-Como usuário do sistema
-Gostaria de acessar tutoriais sobre ferramentas
+because i want to lean how to use them
+As an user of the system
+I'd like to access the tutorials
 
 
 @tutorial_testecapitulo
-Scenario: Desejo testar os capítulos do tutorial
-  Given Que eu esteja na tela de tutorial
-  When Quando eu clico em um capítulo de um tutorial
-  Then O sistema irá exibir o conteúdo do capítulo
+Scenario: to test the chapters do tutorial
+  Given I'm in the tutorials home page 
+  When I click in a chapter of a tutorial
+  Then the system shall show the content 
   
 @tutorial_capitulosconcluidos  
-Scenario: Desejo testar a mudança de cor nos capítulos concluídos
-  Given Que eu esteja na tela de tutorial
-  When Quando eu clico em um capítulo de um tutorial
-    And Concluo o capítulo
-    And Clico no botão "proximo"
-  Then O capítulo concluído irá ter a cor modificada
+Scenario: test the color changing in the chapters
+  Given I'm in the tutorials home page
+  When I click in a chapter of a tutorial
+    And I click in the button "proximo"
+  Then the finished chapter whall have a different collor from the non-finished ones
   
 @tutorial_meuperfil   
-Scenario: Desejo testar o atalho ao meu perfil
-  Given Que eu esteja na tela de tutorial
-  When Eu clico no link "voltar ao perfil"
+Scenario: Test the shortcut to meu perfil
+  Given I'm in the tutorials home page
+  When  I click no link "voltar ao perfil"
   Then O sistema irá direcionar para a tela meu perfil
   
 @tutorial_forum   
-Scenario: Desejo testar o atalho ao forum
-  Given Que eu esteja na tela de tutorial
-  When Eu clico no link "fazer uma pergunta"
-  Then O sistema irá direcionar para a tela de fórum
+Scenario: Test the shortcut to the forum
+  Given I'm in the tutorials home page
+  When I click no link "fazer uma pergunta"
+  Then the system shall redirect me to the tutorials home page
   
 @tutorial_anterior  
-Scenario: Desejo testar a ida para tela anterior
-  Given Que eu esteja na tela de tutorial
-  When Eu clico no botão "anterior"
-  Then O sistema irá direcionar para o capítulo anterior
+Scenario: test going to the previous page
+  Given I'm in the tutorials home page
+  When  I click in the button "anterior"
+  Then the system shall redirect me to the previous chapter
   
 @tutorial_proximo
-Scenario: Desejo testar a ida para proxima tela
-  Given Que eu esteja na tela de tutorial
-  When Eu clico no botão "proximo"
-  Then O sistema irá direcionar para o próximo capítulo
+Scenario: test going to the next page
+  Given I'm in the tutorials home page
+  When I click in the button "proximo"
+  Then the system shall redirect me to the next page
   
