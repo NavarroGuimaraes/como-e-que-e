@@ -20,6 +20,12 @@ class SessionController < ApplicationController
     end
   end
 
+  def createGoogle
+    user = UserGoogle.from_omniauth(request.env['omniauth.auth'])
+    session[:user_id] = user.id
+    redirect_to index_url
+  end
+
   def destroy
     session[:user_id] = nil
     redirect_to index_url

@@ -8,7 +8,7 @@ Given(/^I'm in profile home page $/) do
 end
 
 When(/^I click in a chapter of a tutorial $/) do
-  page.find(:css, "edit").click
+  page.find(:css, 'edit').click
 end
 
 Then(/^the system shall show the content $/) do

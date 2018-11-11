@@ -8,7 +8,7 @@ Given(/^I'm in tutorials home page $/) do
 end
 
 When(/^I click in a chapter of a tutorial $/) do
-  page.find(:css, "chapter_tutorials").click
+  page.find(:css, 'chapter_tutorials').click
 end
 
 Then(/^the system shall show the content $/) do
@@ -27,7 +27,7 @@ When(/^I click in the button "proximo" $/) do
 end
 
 Then(/^the finished chapter whall have a different collor from the non-finished ones $/) do
-  page.evaluate_script("jQuery('body').css('gray');") 
+  page.evaluate_script("jQuery('body').css('gray');")
 end
 
 
@@ -73,4 +73,3 @@ end
 Then(/^the system shall redirect me to the previous chapter $/) do
   expect(page).to have_current_path(user_access_path(search: 'chapter'))
 end
-

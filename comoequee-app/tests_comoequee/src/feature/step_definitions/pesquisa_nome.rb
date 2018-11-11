@@ -8,7 +8,7 @@ Given(/^I'm in tutorials home page $/) do
 end
 
 When(/^I click in a chapter of a tutorial $/) do
-  page.find(:css, "search_tutorials").click
+  page.find(:css, 'search_tutorials').click
 end
 
 Then(/^the system shall show the content $/) do
@@ -23,7 +23,7 @@ Given(/^tutorials home page $/) do
 end
 
 When(/^I click in the button "proximo" $/) do
-  fill_in 'search_tutorial', :with => "Pentear cabelo de boneca"
+  fill_in 'search_tutorial', with: 'Pentear cabelo de boneca'
   page.find(:css, 'search_tutorial').click
 end
 
@@ -39,7 +39,7 @@ Given(/^I'm in tutorials module $/) do
 end
 
 When(/^I click in the button "proximo" $/) do
-  fill_in 'search_tutorial', :with => "Facebook"
+  fill_in 'search_tutorial', with: 'Facebook'
   page.find(:css, 'search_tutorial').click
 end
 
@@ -54,7 +54,7 @@ Given(/^tutorials home page $/) do
 end
 
 When(/^I click in the button "proximo" $/) do
-  fill_in 'search_tutorial', :with => "Pentear cabelo de boneca"
+  fill_in 'search_tutorial', with: 'Pentear cabelo de boneca'
   page.find(:css, 'search_tutorial').click
 end
 
