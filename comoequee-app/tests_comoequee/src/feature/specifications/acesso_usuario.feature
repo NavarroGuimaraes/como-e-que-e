@@ -1,4 +1,3 @@
-#language: pt
 # encoding: utf-8
 
 Feature: test the user access in the plataform
@@ -31,13 +30,13 @@ Scenario: Access with no password given - Login - Email
   Given  I'm in the login module
   When I fill the field name 
 	  And I click on the button "acessar minha conta"
-  Then the system shall show the message: "Favor preencher o campo Senha"
+  Then the system shall show the message: "Ops! Você se esqueceu da senha. Favor preencher o campo senha"
 
 Scenario: access with no name given - Login - Email
   Given  I'm in the login module
   When i fill the field password
 	  And I click on the button "acessar minha conta"
-  Then the system shall show the message: "Favor preencher o campo Nome"
+  Then the system shall show the message: "Ops! Você se esqueceu do nome/e-email. Favor preencher o campo nome/e-email"
 
 Scenario: access with wrong password or wrong user - Login - Email
   Given  I'm in the login module

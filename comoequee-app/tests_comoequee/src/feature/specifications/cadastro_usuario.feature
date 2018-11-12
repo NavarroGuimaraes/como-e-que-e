@@ -1,4 +1,3 @@
-#language: EN
 # encoding: utf-8
 
 Feature: test the user registration successfully
@@ -9,19 +8,8 @@ I want to do my registration in the application
 
 Scenario: Successful registration
   Given I'm in the registration module
-<<<<<<< HEAD
   When I fill the fields "name", "email" , "phone number", "password", "password_confirmation", "facebook_link", "bio" with valid data
 	And press the button "Cadastrar"
-=======
-  When I fill the field name
-    And fill the field email
-	And fill the field phone number
-    And fill the field "password" with "123456"
-    And fill the field "password_confirmation" with "123456"
-    And fill the field "facebook_link" with "facebook.with/cristina.antunes"
-	And fill the field "bio" with "I want to learn with the help of this app and develop my knowledge"
-	And press the button "Sign up"
->>>>>>> fdae0b44578d5dc57a36d57f4685069fc449d03b
   Then the system shall show a pop-up  with the following message: "User registered successfully"
 
 
