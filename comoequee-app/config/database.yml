@@ -87,5 +87,5 @@ test:
 production:
   <<: *default
   database: como-e-que-e_production
-  username: ubuntu
-  password: comoequee
+  username: dufmxfpetyurdf
+  password: ab576b507923d45d2090f4e28973e2431c0be00ee55f20193cf39665bbb0fc74
