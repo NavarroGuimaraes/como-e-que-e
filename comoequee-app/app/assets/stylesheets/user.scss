@@ -1,3 +1,159 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Parte Esquerda da pagina Cadastro*/
+.form_register{
+    background-image: image-url('left_down.svg'), image-url('right_top.svg');
+    background-repeat: no-repeat;
+    background-position-x: 0%, 100%;
+    background-position-y: 105px, -20px;
+    background-size: contain;
+}
+
+/* espaçamento entre os forms*/
+.form label{
+    margin-top: 5px;
+}
+
+
+.form_register_left{
+    margin-left: 5%;
+    margin-top: 50px;
+    max-width: 50%;
+}
+
+#asterisk{
+    color: red;
+}
+
+.password_space{
+    margin-left: 34%;
+}
+
+.name_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 83%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.email_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 83%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.phone_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 83%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.password_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 40.2%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.password_confirmation_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 40.2%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+    margin-left: 2%;
+}
+
+.facebook_field_register{
+    font-family: Open Sans;
+    font-color: #9C9C9C;
+    height: 40px;
+    width: 83%;
+    border-radius: 7px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+
+.form_register_right{
+    margin-left: 55%;
+    margin-top: -25%;
+}
+
+
+
+.biography{
+    font-family: Open Sans;
+    border-radius: 7px;
+    border: none;
+    font-color: #9C9C9C;
+    background-color: #EBEBEB;
+    margin-top: 2%;
+}
+
+#biography_text{
+    margin-left: 60%;
+    margin-top: -60%;
+}
+
+#user_photo{
+    margin-top: -70%;
+}
+
+.cancel_button{
+    font-size: 20px;
+    margin-top: 5.5%;
+    margin-left: 37.7%;
+    padding: 5px 25px;
+    background-color: #767676;
+    border-radius: 7px;
+    border: none;
+    color: white;
+
+}
+
+.register_button{
+    padding: 5px 30px;
+    font-size: 20px;
+    margin-left: 1%;
+    background-color: #048CB4;
+    border: none;
+    border-radius: 7px;
+    color: white;
+
+}
+
+.text_do_login{
+    margin-top: 1%;
+    margin-left: 39%;
+    font-family: Open Sans;
+}
+
+.text_do_login a{
+    text-decoration: none;
+    color: black;
+}
+
+.text_do_login a:hover{
+    color: #FD8F26;
+    
+}

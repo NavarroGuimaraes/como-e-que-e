@@ -1,12 +1,52 @@
-<% if false %>
+
+<section class="login">
+  
+<div id="login">    
+  <div class="div-up">
+    <div class="login_accout">
+      
+              <form id="form_login" method="POST" action="/login">
+                  <label for="name_user">Email</label>
+                  <input type="text" id="name_user" name="email" placeholder="  Digite seu Email">
+                  <label for="password_user">Senha</label>
+                  <input type="password" id="password_user" name="password" placeholder="  Digite sua senha">
+
+                  <a href="#">Esqueci minha senha</a>
+                  <input class="btn_send" type="submit" value="acessar minha conta">
+                  
+              </form>
+              <% flash[:error] %>
+    </div>
+    
+    
+    <div class="api-login">
+      <div clas="api">
+        <div>
+          <% if current_user %>
+            Signed in as <strong><%= current_user.name %></strong>!
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          <% else %>
+            <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+
+  
+  <div class="div-down">
+    <p>Não tem uma conta? <a href="#"><b>Faça seu cadastro</b></a></p>
+  </div>
+
+
+</div>  
+</section>
 
 
 
-<%= form_tag '/login' do %>
-
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
 
 <% end %>
 

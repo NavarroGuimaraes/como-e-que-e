@@ -6,6 +6,5 @@ require 'capybara'
 require 'capybara/cucumber'
 
 Capybara.config do |config|
-    config.default_drive = :selenium_chrome
+  config.default_drive = :selenium_chrome
 end
-

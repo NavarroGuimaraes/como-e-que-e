@@ -1,46 +1,41 @@
-#language: pt
-# encoding: utf-8
 
-Feature: testar o formulário de contato
+Feature: to test the contact forms 
 
-Para entrar em contato com os administradores 
-Como usuário do sistema
-Eu quero que o sistema possua um formulário de contato
+contact the adminstrators 
+As a system user
+I want the system to have a contact form which I'd be able to fill and make contact with the adminstrators
 
-  Cenário: Enviar contato sem campos preenchidos - Home
-
-     Dado que eu estou na página ContatoHome
-     Quando eu clico no botão "Enviar"
-     Então o sistema irá exibir uma mensagem "Favor preencher os campos da parte de Contato"
+  Scenario: Make contact with empty fields - Home
+     Given I'm in the contatoHome page 
+     When I click on the button Enviar
+     Then the system shall show a message "Favor preencher os campos da parte de Contato"
      
 
-  Cenário: Enviar contato com sucesso - Home
+  Scenario: successful contact - Home
+    Given I'm in the contatoHome page 
+    When I fill all fields
+      And I click on the button Enviar
+    Then the system shall show a message "Contato realizado with sucesso, aguarde um retorno no email informado no prazo de até 5 dias utéis"
 
-    Dado que eu estou na página ContatoHome
-    Quando eu preencher todos os campos
-      E eu clico no botão "Enviar"
-    Então o sistema irá exibir uma mensagem "Contato realizado com sucesso, aguarde um retorno no email informado no prazo de até 5 dias utéis"
+  Scenario: contact with no e-mail - Home
+    Given I'm in the contatoHome page 
+    When I fill the field Nome 
+      And I fill the field Descrição 
+      And I click on the button Enviar
+    Then the system shall show a message "Favor preencher o email, para poder enviar seu contato"
 
-  Cenário: Enviar contato sem campo email preenchido - Home
-
-    Dado que eu estou na página ContatoHome
-    Quando eu preencher o campo "Nome" com "Cristina Antunes"
-      E preencho o campo "Descrição" com "Gostaria de indicar o curso de como usar o email, que não localizei na ferramenta de vocês."
-      E eu clico no botão "Enviar"
-    Então o sistema irá exibir uma mensagem "Favor preencher o email, para poder enviar seu contato"
-
-  Cenário: Enviar contato sem o campo Descrição preenchido - Home
-    Dado que eu estou na página ContatoHome
-    Quando eu preencher o campo Nome com "Cristina Antunes"
-      E preencho o campo Email com "cristina_antunes@gmail"
-      E eu clico no botão "Enviar"
-    Então o sistema irá exibir uma mensagem "Favor preencher a Descrição, para poder enviar seu contato"
+  Scenario: contact with no description  - Home
+    Given I'm in the contatoHome page 
+    When I fill the field Nome 
+      And I fill the field Email 
+      And I click on the button Enviar
+    Then the system shall show a message "Favor preencher a Descrição, para poder enviar seu contato"
     
-  Cenário: Enviar contato sem o campo Nome preenchido - Home
-    Dado que eu estou na página ContatoHome
-    Quando eu preencher o campo Email com "cristina_antunes@gmail"
-      E preencho o campo Descrição com "Gostaria de indicar o curso de como usar o email, que não localizei na ferramenta de vocês."
-      E eu clico no botão "Enviar"
-    Então o sistema irá exibir uma mensagem "Contato realizado com sucesso, aguarde um retorno no email informado no prazo de até 5 dias utéis"
+  Scenario: Contact with no name on it - Home
+    Given I'm in the contatoHome page 
+    When I fill the field Email 
+      And I fill the field Descrição 
+      And I click on the button Enviar
+    Then the system shall show a message "Contato realizado with sucesso, aguarde um retorno no email informado no prazo de até 5 dias utéis"
 
  
