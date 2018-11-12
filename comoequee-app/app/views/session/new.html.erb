@@ -1,3 +1,4 @@
+
 <section class="login">
   
 <div id="login">    
@@ -47,3 +48,128 @@
 
 
 
+<% end %>
+
+<!--
+
+            <form id="form_login" autocomplete="off">
+                <label>Nome</label>
+                <br>
+                <input class="field_name" type="text" placeholder="  Digite seu nome"><br>
+                <label>Senha</label>
+                <br>
+                <input class="field_email" type="password" placeholder="  Digite seu email">
+            </form>
+            
+-->
+
+<% end %>
+
+
+
+<section class="login">
+    
+    
+<div id="login">    
+  <div class="div-up">
+    <div class="login_accout">
+      
+              <form id="form_login" autocomplete="off">
+                  <label for="name_user">Nome</label>
+                  <input type="text" id="name_user" name="name" placeholder="  Digite seu nome">
+                  <label for="password_user">Senha</label>
+                  <input type="password" id="password_user" name="password" placeholder="  Digite sua senha">
+
+                  <a href="#">Esqueci minha senha</a>
+                  <input class="btn_send" type="submit" value="acessar minha conta">
+                  
+              </form>
+      
+    </div>
+    
+    
+    <div class="api-login">
+      <div clas="api">
+        <p>Google</p>
+        <p>Facebook</p>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+
+  
+  <div class="div-down">
+    <p>Não tem uma conta? <a href="#"><b>Faça seu cadastro</b></a></p>
+  </div>
+
+
+</div>
+</section>
+
+
+
+
+<!--Modais password-->
+<section class="modal-check-email">
+  <div class="box-check-email">
+      <input class="box-email__close" type="button" value="X">
+    <div class="box-email__text">
+      <h1>Verifique seu email</h1>
+      <p>Enviamos para você um link para resetar sua senha. Clique no link do email e altere sua senha.</p>
+    </div>
+    
+    <div class="box-email__login">
+      <p>Lembrou sua senha?<a href="#"><b>Faça o Login</b></a></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="modal-insert-email">
+  <div class="box-insert-email">
+    <input class="box-email__close" type="button" value="X">
+    <div class="box-insert-email__text">
+      <h1>Esqueceu sua Senha?</h1>
+      <p>Enviaremos um link para você<br> resetar sua senha.</p>
+      <input type="email" class="text-box-insert-email" name="email" placeholder=" digite seu email">
+    </div>
+    <input class="btn_submit-email" type="submit" value="enviar">
+    <div class="box-email__login">
+      <p>Lembrou sua senha?<a href="#"><b>Faça o Login</b></a></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="modal-new-password">
+  <div class="box-new-password">
+    <input class="box-email__close" type="button" value="X">
+    <div class="box-insert-password">
+      <h3>Digite sua senha atual</h3>
+      <input type="password" class="text-box-insert-password" name="password" placeholder="********">
+      <p>Esqueceu sua senha? <b><a href="#">Clique aqui</a></b></p>
+    </div>
+    
+    
+    
+    <div class="box-text-insert-new__password">
+      <p>Nova senha</p>
+      <p2>Repita sua nova senha</p2>
+    </div>
+    
+    
+    <div class="box-insert-new__password">
+      <input type="password" class="text-box-insert-new__password" name="password" placeholder="********">
+      <input type="password" class="text-box-insert-confirm-new__password" name="password" placeholder="********">
+    </div>
+    
+    
+    <div class="box-btn_submit-password">
+      <input class="btn_submit-password" type="submit" value="confirmar alterações">
+    </div>
+  </div>
+</section>
