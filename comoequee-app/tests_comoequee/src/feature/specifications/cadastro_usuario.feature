@@ -1,4 +1,3 @@
-#language: EN
 # encoding: utf-8
 
 Feature: test the user registration successfully
