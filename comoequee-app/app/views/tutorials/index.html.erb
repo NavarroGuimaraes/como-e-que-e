@@ -5,14 +5,19 @@
       <input type="submit" value="pesquisar" class="search-tutorial__submit">
     </form>
     <div class="tutorials">
-      <% for @tutorial in @tutorials %>
-      <a href="#">
-        <figure class="tutorials__tutorial">
-          <img src="">
-          <figcaption><%= @tutorial.name %></figcaption>
-        </figure>
-      </a>
+      <% if @tutorials.any? %>
+        <% for @tutorial in @tutorials %>
+          <a href="#">
+            <figure class="tutorials__tutorial">
+              <img src="">
+              <figcaption><%= @tutorial.name %></figcaption>
+            </figure>
+          </a>
+          <% end %>
+      <% else %>
+        <h1> teste </h1>
       <% end %>
+        
     </div>
     <div class="pagination">
       <%= will_paginate @tutorials %>
