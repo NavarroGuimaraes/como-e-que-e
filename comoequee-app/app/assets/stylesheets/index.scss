@@ -86,7 +86,7 @@ label{
     padding: 10px;
     font-size: 16px;
     border: none;
-    border-radius: 4%;
+    border-radius: 7px;
     text-align: center;
     color: white;
 }
@@ -291,6 +291,7 @@ div#form{
 }
 
 .campo_nome{
+    padding-left: 10px;
     width: 100%;
     font-family: Open Sans;
     font-color: #9C9C9C;
@@ -301,6 +302,7 @@ div#form{
 }
 
 .campo_email{
+    padding-left: 10px;
     width: 100%;
     font-family: Open Sans;
     font-color: #9C9C9C;
@@ -312,6 +314,8 @@ div#form{
 }
 
 .descricao{
+    padding-left: 10px;
+    width: 100%;
     font-family: Open Sans;
     color: #9C9C9C;
     border-radius: 7px;
@@ -330,7 +334,7 @@ div#form{
     border: none;
     border-radius: 5px;
     background: #048CB4;
-    margin-left: 165px;
+    margin-left: 74%;
 }
 
 
