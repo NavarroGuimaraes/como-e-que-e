@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get  '/logout/',                to: 'session#destroy',      as: 'logout'
   get  '/cadastro/',              to: 'user#new',             as: 'register'
   post '/cadastro/',              to: 'user#create',          as: 'register-form'
+  get  '/delete/',                to: 'user#destroy',         as: 'delete-user'
   # Login with google
   get 'auth/:provider/callback',  to: 'session#createGoogle', as: 'login-google'
   get 'auth/failure',             to: redirect('/login/'),    as: 'login-failure'
