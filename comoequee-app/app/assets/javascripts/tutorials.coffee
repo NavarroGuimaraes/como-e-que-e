@@ -28,7 +28,10 @@ window.addEventListener 'DOMContentLoaded', (->
         result = audio_transcription or interim_transcript
         console.log result
         i++
-      document.getElementById('search-tutorial__input').innerHTML = result
+      #  document.getElementsByClassName('search-tutorial__input')[0].value = result
+      input = document.getElementsByClassName('search-tutorial__input')[0]
+      input.value = result
+
       return
 
     button_record.addEventListener 'click', ((e) ->
