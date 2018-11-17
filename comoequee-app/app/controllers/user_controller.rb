@@ -18,6 +18,12 @@ class UserController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(session[:user_id]).destroy
+    session[:user_id] = nil
+    redirect_to index_url
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :phone, :facebook, :bio, :password, :password_confirmation)
