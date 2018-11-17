@@ -10,7 +10,7 @@
     <div class="tutorials">
       <% if @tutorials.any? %>
         <% for @tutorial in @tutorials %>
-          <a href="#">
+          <a href="/tuto/<%= @tutorial.id %>">
             <figure class="tutorials__tutorial">
               <img src="">
               <figcaption><%= @tutorial.name %></figcaption>
