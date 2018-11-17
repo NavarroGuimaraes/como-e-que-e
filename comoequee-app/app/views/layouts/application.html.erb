@@ -5,10 +5,10 @@
     <title>Como é que é?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-        <%= csp_meta_tag %>
 
-            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-                <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 </head>
 
 <body>
@@ -16,39 +16,58 @@
 
     <nav class="navbar">
         <div class="icon-nav">
-            <a href="#"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %>
-
-</a>
+            <a href="/"><img src="/assets/logo-complete.svg" alt="como-e-que-e-logo" ></a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Como funciona</a></li>
-                <li><a href="#">Tutoriais</a></li>
-                <li><a href="#">Contato</a></li>
-                <li>
-                    <a href="#"> <b>Login</b></a>
-                </li>
-                <li>
-                    <a href="#"> <b>Cadastro</b></a>
-                </li>
+                <li><a href="/index">Início</a></li>
+                <li><a href="/index#como-funciona">Como funciona</a></li>
+                <li><a href="/index#tutoriais">Tutoriais</a></li>
+                <li><a href="/index#contato">Contato</a></li>
+                <% if current_user %>
+                    <li><a href="/perfil/""><b>Meu perfil</b></a></li>
+                    <li><a href="/logout"><b>Sair</b></a></li>
+                <% else %>
+                    <li><a href="/login"> <b>Login</b></a></li>
+                    <li><a href="/cadastro"> <b>Cadastro</b></a></li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="toggle-menu">
+            
+            <button class="toggle-btn" onclick="toggleMenu(this)">
+                <img src="/assets/toggle.svg" alt="toggle-menu" >
+            </button>
+            
+            <ul class="toggle-menu__list">
+                <li><a href="/index">Início</a></li>
+                <li><a href="/index#como-funciona">Como funciona</a></li>
+                <li><a href="/index#tutoriais">Tutoriais</a></li>
+                <li><a href="/index#contato">Contato</a></li>
+                <% if current_user %>
+                    <li><a href="/perfil/"><b>Meu perfil</b></a></li>
+                    <li><a href="/logout"><b>Sair</b></a></li>
+                <% else %>
+                    <li><a href="/login"> <b>Login</b></a></li>
+                    <li><a href="/cadastro"> <b>Cadastro</b></a></li>
+                <% end %>
             </ul>
         </div>
     </nav>
 
     <%= yield %>
+        
         <!--Footer-->
-
         <footer>
             <div class="logo-footer">
-                <a href="#"><%= image_tag("logo-complete.svg", :alt => "como-e-que-e-logo") %></a>
+                <a href="#"><img src="/assets/logo-complete.svg" alt="como-e-que-e-logo"></a>
             </div>
             <div class="menu-footer">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Como funciona</a></li>
-                    <li><a href="#">Tutoriais</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/index">Início</a></li>
+                    <li><a href="/index#como-funciona">Como funciona</a></li>
+                    <li><a href="/index#tutoriais">Tutoriais</a></li>
+                    <li><a href="/index#contato">Contato</a></li>
                 </ul>
             </div>
         </footer>

@@ -14,9 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-
-
 // TUTOTIALS
 
 //SEARCH VOICE
@@ -82,3 +79,13 @@
             console.log("navegador não apresenta suporte a web speech api");
         }
     }, false);
+
+function toggleMenu(btn) {
+  var toggleList = document.querySelector('.toggle-menu__list');
+  var display = toggleList.style.display
+  if (display == 'none') {
+    toggleList.style.display = 'flex';
+  } else {
+    toggleList.style.display = 'none';
+  }
+};

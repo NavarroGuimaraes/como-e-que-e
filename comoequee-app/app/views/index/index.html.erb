@@ -1,19 +1,10 @@
-<section class="tutorials">
+<section class="tutorials-cto">
     <div class="message">
-        <div class="text">
         <h1>Venha conhecer nossos tutoriais e descubra como usar algumas das ferramentas mais utilizadas</h1>
-        </div>
-    </div>
-    
-    
-    <div id="div-button">
-        <div class="button-tutorials">
         <button id="see-tutorials">Conhecer tutoriais</button>
-        </div>
     </div>
-    
     <div id="div-down">
-        <%= image_tag("down-arrows.svg", :alt => "logo-arrow", :class => "down-arrows") %></a>
+        <img alt="Arrow down" src="/assets/down-arrows.svg" class="down-arrows">
         <p>Entenda<br> como funciona</p>
     </div>
 </section>
@@ -21,17 +12,22 @@
 
 
 
-<section class="how-function">
+
+<section class="how-function" id="como-funciona">
     <p id="title"><b>Como funciona</b></p>
-    
+
     <div class="image-function">
         <div id="column"><img></div>
-        <div id="arrow-left"><%= image_tag("left-arrow.svg", :alt => "left-arrow", :class => "arrows") %></a></div>
+        <div id="arrow-left">
+            <img alt="Arrow left" src="/assets/left-arrow.svg" class="arrows">
+        </div>
         <div id="column"><img></div>
-        <div id="arrow-left"><%= image_tag("left-arrow.svg", :alt => "left-arrow", :class => "arrows") %></div>
+        <div id="arrow-left">
+            <img alt="Arrow left" src="/assets/left-arrow.svg" class="arrows">
+        </div>
         <div id="column"><img></div>
     </div>
-    
+
 </section>
 
 
@@ -39,43 +35,43 @@
 
 
 
-<section class="our-tutorials">
+<section class="our-tutorials" id="tutoriais">
     <p id="title"><b>Nossos tutoriais</b></p>
-    
+
     <div class="image-tutorials">
-        
-        
+
+
         <div><a href="#">
-        <img>
-        <p>Whatsapp</p>
-        </a>
+                <img>
+                <p>Whatsapp</p>
+            </a>
         </div>
-        
+
         <div><a href="#">
-        <img>
-        <p>Aplicativos</p>
-        </a>
+                <img>
+                <p>Aplicativos</p>
+            </a>
         </div>
-        
+
         <div><a href="#">
-        <img>
-        <p>Facebook</p>
-        </a>
+                <img>
+                <p>Facebook</p>
+            </a>
         </div>
-        
+
         <div><a href="#">
-        <img>
-        <p>Wi-fi</p>
-        </a>
+                <img>
+                <p>Wi-fi</p>
+            </a>
         </div>
-    </div>
-    
-    <div id="see-more">
-        <a href="#">Veja mais</a>
-        <%= image_tag("see-more-triangle.svg", :alt => "left-arrow", :class => "arrows") %>
     </div>
 
-    
+    <div id="see-more">
+        <a href="/tutoriais">Veja mais</a>
+        <img alt="Triangle" src="/assets/see-more-triangle.svg" class="arrows">
+    </div>
+
+
 </section>
 
 
@@ -83,24 +79,24 @@
 
 
 
-<section class="contact">
+<section class="contact" id="contato">
     <div id="text">
         <p id="title"><b>Entre em<br> contato conosco</b></p>
         <p>Tem alguma dúvida?<br>Deseja algum curso?</p>
     </div>
-    
+
     <div id="form">
-        <form id="formulario" autocomplete="off">
+        <form id="formulario" action="https://formspree.io/emersonvvictor@gmail.com" method="POST">
             <label>Nome</label>
             <br>
-            <input class="campo_nome" type="text" placeholder="  Digite seu nome"><br>
+            <input class="campo_nome" type="text" placeholder="Digite seu nome" name="name"><br>
             <label>Email</label>
             <br>
-            <input class="campo_email" type="email" placeholder="  Digite seu email">
+            <input class="campo_email" type="email" placeholder="Digite seu email" name="email">
             <br>
             <label>Descrição</label>
             <br>
-            <textarea class="descricao" cols="35" rows="8" placeholder=" Digite seu problema"></textarea><br>
+            <textarea class="descricao" cols="35" rows="8" placeholder="Digite seu problema" name="description"></textarea><br>
             <input class="btn_submit" type="submit" value="Enviar">
         </form>
     </div>

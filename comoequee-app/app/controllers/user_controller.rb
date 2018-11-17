@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UserController < ApplicationController
+  protect_from_forgery
+
   def new
   end
 
@@ -9,11 +11,17 @@ class UserController < ApplicationController
 
     if user.save
       session[:user_id] = user.id
-      redirect_to index_url, notice: 'Cadastro realizado com sucesso!'
+      redirect_to login_url, notice: 'Cadastro realizado com sucesso!'
     else
       flash[:error] = 'Ops, parece que ocorreu um erro :( Tente novamente'
       redirect_to login_url
     end
+  end
+
+  def destroy
+    User.find(session[:user_id]).destroy
+    session[:user_id] = nil
+    redirect_to index_url
   end
 
   private

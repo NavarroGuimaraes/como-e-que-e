@@ -8,11 +8,6 @@ body {
     margin: 0px;
 }
 
-img {
-    height: 200px;
-    width: 200px;
-}
-
 #title{
     font-size: 40px;
 }
@@ -35,13 +30,14 @@ label{
 
 /*TUTORIALS*/
 
-.tutorials {
+.tutorials-cto {
+    position: relative;
     margin-right: 0px;
     width: 100%;
-    min-height: calc(95vh - 88px);
+    min-height: calc(85vh - 66px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     
     
     background-image: image-url('tutorials.svg');
@@ -55,11 +51,23 @@ label{
 
 
 .message{
+    margin-left: 10%;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
     height: 100%;
-    width: 60%;
+    width: 40%;
+}
+
+@media (max-width: 790px) {
+    .message {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    .message {
+        width: 90%;
+    }
 }
 
 .text {
@@ -71,24 +79,16 @@ label{
 
 /*BUTTON*/
 
-div#div-button{
-    margin-left: 12%;
-}
-
 #see-tutorials {
+    width: 40%;
     min-width: 200px;
     background: #048CB4;
     padding: 10px;
     font-size: 16px;
     border: none;
-    border-radius: 4%;
+    border-radius: 7px;
     text-align: center;
     color: white;
-}
-
-#see-tutorials {
-    height: 40px;
-    width: 100%;
 }
 
 div.button-tutorials {
@@ -99,11 +99,14 @@ div.button-tutorials {
 
 /**/
 #div-down{
-    margin-top: 8%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
 }
 
 div#div-down p{
@@ -148,13 +151,13 @@ div#div-down p{
     background-color: #ddd;
     border-radius: 100%;
     border-right: 20px;
+    height: 200px;
+    width: 200px;
 }
 
 #column{
     display: flex;
     justify-content: center;
-    height: 50%;
-    width: 25%;
 }
 
 #arrow-left{
@@ -185,6 +188,11 @@ div#div-down p{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
 }
 
 
@@ -248,7 +256,13 @@ div#div-down p{
     background-repeat: no-repeat;
     background-position-y: -10px;
     background-size: 124px;
+}
 
+@media (max-width: 600px) {
+    .contact {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
 }
 
 .contact div{
@@ -260,26 +274,25 @@ div#div-down p{
 }
 
 #text{
+    margin: 50px 0 50px 10%;
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
-    margin-left: 15%;
+    justify-content: center;
     order: 1;
 }
 
 /*FORM*/
 
 div#form{
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1%;
-}
-
-#formulario{
 }
 
 .campo_nome{
+    padding-left: 10px;
+    width: 100%;
     font-family: Open Sans;
     font-color: #9C9C9C;
     height: 40px;
@@ -289,6 +302,8 @@ div#form{
 }
 
 .campo_email{
+    padding-left: 10px;
+    width: 100%;
     font-family: Open Sans;
     font-color: #9C9C9C;
     height: 40px;
@@ -299,23 +314,27 @@ div#form{
 }
 
 .descricao{
+    padding-left: 10px;
+    width: 100%;
     font-family: Open Sans;
     color: #9C9C9C;
     border-radius: 7px;
     border: none;
     background-color: #EBEBEB;
+    resize: none;
 }
 
 
 .btn_submit{
+    height: 30px;
     font-weight: bolder;
-    width: 70px;
+    width: 90px;
     font-family: Open Sans;
     color: white;
     border: none;
-    border-radius: 5%;
+    border-radius: 5px;
     background: #048CB4;
-    margin-left: 195px;
+    margin-left: 74%;
 }
 
 
@@ -344,7 +363,7 @@ div#form{
         margin-bottom: 60px;
     }
     
-    img {
+    #column img {
         height: 150px;
         width: 150px;
     }
@@ -393,11 +412,10 @@ div#form{
     div.button-tutorials {
         width: 26%;
     }
-}
 
-@media only screen and (max-width: 599px){
-    div.button-tutorials {
-        width: 27%;
+    #column img {
+        height: 90px;
+        width: 90px;
     }
 }
 

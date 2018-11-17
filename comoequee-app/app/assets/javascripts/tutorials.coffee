@@ -1,5 +1,5 @@
 window.addEventListener 'DOMContentLoaded', (->
-  button_record = document.querySelector('#search_voice')
+  button_record = document.querySelector('#search-tutorial__voice')
   audio_transcription = ''
   is_recording = false
   if window.SpeechRecognition or window.webkitSpeechRecognition
@@ -28,7 +28,7 @@ window.addEventListener 'DOMContentLoaded', (->
         result = audio_transcription or interim_transcript
         console.log result
         i++
-      document.getElementById('textarea').innerHTML = result
+      document.getElementById('search-tutorial__input').innerHTML = result
       return
 
     button_record.addEventListener 'click', ((e) ->
