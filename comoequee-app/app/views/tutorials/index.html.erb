@@ -1,17 +1,34 @@
-<section> 
-  <form method="GET">
-    <input name="search">
-    <input type="submit">
-  </form>
-  <div class="tutorials">
-    <% for @tutorial in @tutorials %>
-      <figure>
-        <img src="">
-        <figcaption><%= @tutorial.name %></figcaption>
-      </figure>
-    <% end %>
-  </div>
-  <div class="pagination">
-    <%= will_paginate @tutorials %>
-  </div>
+<section class="tutorials-bg">
+<div class="box-text_box_and_button">
+      <form method="GET" class="search-tutorial" action="/tutoriais/">
+        <input name="com_nome" class="search-tutorial__input" placeholder=" Digite um tutorial de interesse">
+        <input type="submit" value="" class="search-tutorial__voice">
+        <input type="submit" value="pesquisar" class="search-tutorial__submit">
+      </form>
+    </div>
+  <section class="tutorials-list"> 
+    <div class="tutorials">
+      <% if @tutorials.any? %>
+        <% for @tutorial in @tutorials %>
+          <a href="#">
+            <figure class="tutorials__tutorial">
+              <img src="">
+              <figcaption><%= @tutorial.name %></figcaption>
+            </figure>
+          </a>
+          <% end %>
+      <% else %>
+        <div class="box-text-tutorials">
+          <h1>Poxa, não encontrou o que procurava?<br><a href="#">Clique aqui</a> e entre em contato conosco!!</h1>
+        </div>
+      <% end %>
+        
+    </div>
+    <div class="pagination">
+      <%= will_paginate @tutorials %>
+    </div>
+  </section>
 </section>
+
+
+  

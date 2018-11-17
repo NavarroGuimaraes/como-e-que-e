@@ -10,29 +10,38 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
+ html, body {
+   margin: 0;
+   width: 100%;
+   border: none;
+ }
 
+ * {
+   outline: transparent;
+   font-family: "Open Sans";
+ }
 
 /*NAVBAR*/
 
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #f1f1f1;
     box-shadow: 0px 2px 8px #888888;
     width: 100%;
 }
 
 .icon-nav img {
-    /*altura*/
-    height: 76.4px;
-    /*largura*/
-    width: 124.8px;
-    
+    height: 100%;
+    max-width: 124px;
     margin-top: 5px;
     margin-left: 40%;
+    width: 80%;
 }
 
 .menu {
@@ -67,6 +76,56 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+.toggle-menu {
+    display: none;
+}
+
+
+.toggle-btn {
+    margin-right: 10px;
+    font-size: 20px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-menu__list {
+    padding: 20px 0;
+    position: absolute;
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    background-color: white;
+    top: 50px;
+    right: 0px;
+    width: 100vw;
+    z-index: 1;
+}
+
+.toggle-menu li {
+    text-align: center;
+}
+
+.toggle-menu a, .toggle-menu a:visited, .toggle-menu a:link {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+        position: relative;
+    }
+}
+
 
 
 /*FOOTER*/
@@ -112,6 +171,11 @@ footer li a:hover {
 }
 
 /*BREAKPOINTS*/
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 768px) {
+    
+    /*MENU*/
+    .menu li {
+        margin: 2px;
+    }
     
 }
