@@ -3,10 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe TutorialController, type: :controller do
-  describe 'GET #index' do
-    it 'returns http success' do
-      get :index
-      expect(response).to have_http_status(:success)
+  describe 'validate search' do
+    it 'create class tutorial' do
+      tutorial = TutorialController.new()
     end
   end
 end
