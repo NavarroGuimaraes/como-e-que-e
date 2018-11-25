@@ -1,3 +1,90 @@
 // Place all the styles related to the Tutorial controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*chapter description*/
+
+.chapter_description {
+    width: 65%;
+    height: 100%;
+}
+
+.buttons_chapter {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+}
+
+.buttons_chapter input {
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0px;
+    margin: 5px;
+    max-height: 100%;
+    width: 33%;
+}
+
+.back-chapter {
+    background-color: #767676;
+}
+
+.next-chapter {
+    background: #048CB4;
+}
+
+.buttons_top_chapter a {
+    color: black;
+    text-decoration: none;
+}
+
+.image_chapter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.buttons_top_chapter {
+    margin-right: 41px;
+    margin-top: 21px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 6%;
+}
+
+
+/*chapter tutorials*/
+
+.chapter_tutorials {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chapter_tutorials div {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #f1f1f1;*/
+    height: 100%;
+}
+
+.chapter_tutorials a:active {
+    color: #FD8F26;
+}
+
+.chapter_tutorials a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    border: 1px solid #f1f1f1;
+    height: 100%;
+    width: 100%;
+}
