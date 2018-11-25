@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'spec'
 
 if Spec::Ruby.version.to_f >= 1.9
-  gem 'test-unit','= 1.2.3'
+  gem 'test-unit', '= 1.2.3'
 end
 
 require 'test/unit'
@@ -16,7 +18,7 @@ Loaded:   test-unit-#{Test::Unit::VERSION}
 With ruby-1.9, rspec-#{Spec::VERSION::STRING} requires test-unit-1.2.3, and
 tries to force it with "gem 'test-unit', '= 1.2.3'" in:
   #{__FILE__}
-  
+
 Unfortunately, test-unit-#{Test::Unit::VERSION} was loaded anyway. While we are
 aware of this bug we have not been able to track down its source.
 Until we do, you have two alternatives:
