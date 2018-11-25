@@ -18,7 +18,6 @@ class UserController < ApplicationController
     end
   end
 
-# feat/editar_perfil
  def edit
     @user = User.find(session[:user_id])
   end
@@ -36,7 +35,6 @@ class UserController < ApplicationController
     redirect_to index_url
   end
 
-develop
   private
     def user_params
       params.require(:user).permit(:name, :email, :phone, :facebook, :bio, :password, :password_confirmation)
