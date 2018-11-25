@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec/test'
 
 # Hack to stop active_support/dependencies from complaining about
