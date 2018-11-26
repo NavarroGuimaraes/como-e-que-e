@@ -16,7 +16,7 @@ class TutorialController < ApplicationController
 
     redirect_to "/tutorial/#{tutorial_id}/#{chapter_id}/#{content_id}/"
     # Video
-    video_id = Content.where(chapter_id: chapter_id).ids[5]
+    video_id = Content.where(chapter_id: chapter_id).ids[6]
     video = Yt::Video.new id:  video_id
     video.embed_html
   end
