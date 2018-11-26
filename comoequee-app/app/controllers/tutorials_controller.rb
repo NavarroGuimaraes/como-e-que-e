@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 class TutorialsController < ApplicationController
-  Yt.configure do |config|
-    config.api_key = 'AIzaSyA8h7I4wunB3J-0sH-7VMu1vKIQGGDK_iw'
-  end
-
   def index
     @tutorials = if params[:com_nome]
       Tutorial.where('name LIKE ?', "%#{params[:com_nome]}%").paginate(page: params[:page], per_page: 12)

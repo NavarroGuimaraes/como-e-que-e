@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(version: 2018_11_25_211100) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_googles", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "phone"
+    t.string "facebook"
+    t.text "bio"
+  end
+
   create_table "user_tutorials", force: :cascade do |t|
     t.integer "user_id"
     t.integer "tutorial_id"
