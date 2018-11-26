@@ -36,34 +36,25 @@
 
 
 <section class="our-tutorials" id="tutoriais">
+   
     <p id="title"><b>Nossos tutoriais</b></p>
 
     <div class="image-tutorials">
-
-
-        <div><a href="#">
-                <img>
-                <p>Whatsapp</p>
-            </a>
+        <% if @tutorials.any? %>
+        <% for @tutorial in @tutorials %>
+          <a href="/tuto/<%= @tutorial.id %>">
+            <figure class="tutorials__tutorial">
+              <img src="">
+              <figcaption><%= @tutorial.name %></figcaption>
+            </figure>
+          </a>
+          <% end %>
+      <% else %>
+        <div class="box-text-tutorials">
+          <h1>Desculpe, não possuimos nenhum tutorial no momento :(</h1>
         </div>
+      <% end %>
 
-        <div><a href="#">
-                <img>
-                <p>Aplicativos</p>
-            </a>
-        </div>
-
-        <div><a href="#">
-                <img>
-                <p>Facebook</p>
-            </a>
-        </div>
-
-        <div><a href="#">
-                <img>
-                <p>Wi-fi</p>
-            </a>
-        </div>
     </div>
 
     <div id="see-more">
