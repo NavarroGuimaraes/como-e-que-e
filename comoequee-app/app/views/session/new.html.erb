@@ -1,6 +1,6 @@
 
 <section class="login">
-  
+
 <div id="login">    
   <div class="div-up">
     <div class="login_accout">
@@ -27,6 +27,14 @@
             <%= link_to "Sign out", signout_path, id: "sign_out" %>
           <% else %>
             <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+          <% end %>
+        </div>
+        <div clas="btn btn-si btn-si-a btn-facebook">
+          <% if current_user %>
+            Signed in as <strong><%= current_user.name %></strong>!
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          <% else %>
+            <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, id: "sign_in" %>
           <% end %>
         </div>
       </div>
