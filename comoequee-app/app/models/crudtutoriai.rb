@@ -1,0 +1,2 @@
+class Crudtutoriai < ApplicationRecord
+end

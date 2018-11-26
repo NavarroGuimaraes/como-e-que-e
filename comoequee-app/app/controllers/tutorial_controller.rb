@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class TutorialController < ApplicationController
-  before_action :authorize
+  #before_action :authorize
+  Yt.configure do |config|
+    config.api_key = 'AIzaSyA8h7I4wunB3J-0sH-7VMu1vKIQGGDK_iw'
+  end
 
   def show
     # Tutorial
@@ -12,8 +15,12 @@ class TutorialController < ApplicationController
     content_id = Content.where(chapter_id: chapter_id).ids[0]
 
     redirect_to "/tutorial/#{tutorial_id}/#{chapter_id}/#{content_id}/"
+    # Video
+    #video_id = Content.where(chapter_id: chapter_id).ids[6]
+    #@video = Yt::Video.new url:  video_id
+    #@teste = @video.embed_html
   end
-
+  
   def index
     tutorial_id = params[:tutorial_id].to_i
     chapter_id = params[:chapter_id].to_i
