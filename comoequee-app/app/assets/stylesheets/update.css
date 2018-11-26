@@ -135,6 +135,8 @@ body{
     font-color: #9C9C9C;
     background-color: #EBEBEB;
     margin-top: 2%;
+    width: 80%;
+    height: 200px;
 }
 
 .edit_cancel_button{
