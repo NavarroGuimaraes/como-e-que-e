@@ -19,7 +19,7 @@
 //SEARCH VOICE
 
     window.addEventListener('DOMContentLoaded', function() {
-        var btn_gravacao = document.querySelector('search-tutorial__input');
+        var btn_gravacao = document.querySelector('.search-tutorial__input');
 
         var transcricao_audio = '';
         var esta_gravando = false;
