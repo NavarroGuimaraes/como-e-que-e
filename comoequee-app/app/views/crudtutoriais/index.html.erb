@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Crudtutoriais</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id seq</th>
+      <th>Namecourse</th>
+      <th>Namechapter</th>
+      <th>Contentchapter</th>
+      <th>Duration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crudtutoriais.each do |crudtutoriai| %>
+      <tr>
+        <td><%= crudtutoriai.id_seq %></td>
+        <td><%= crudtutoriai.namecourse %></td>
+        <td><%= crudtutoriai.namechapter %></td>
+        <td><%= crudtutoriai.contentchapter %></td>
+        <td><%= crudtutoriai.duration %></td>
+        <td><%= link_to 'Show', crudtutoriai %></td>
+        <td><%= link_to 'Edit', edit_crudtutoriai_path(crudtutoriai) %></td>
+        <td><%= link_to 'Destroy', crudtutoriai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Crudtutoriai', new_crudtutoriai_path %>
