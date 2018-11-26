@@ -1,0 +1,42 @@
+<%= form_with(model: crudtutoriai, local: true) do |form| %>
+  <% if crudtutoriai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(crudtutoriai.errors.count, "error") %> prohibited this crudtutoriai from being saved:</h2>
+
+      <ul>
+      <% crudtutoriai.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_seq %>
+    <%= form.text_field :id_seq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namecourse %>
+    <%= form.text_field :namecourse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namechapter %>
+    <%= form.text_field :namechapter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contentchapter %>
+    <%= form.text_field :contentchapter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -87,3 +87,6 @@ gem 'ransack'
 
 # Youtube
 gem 'yt', '~> 0.28.0'
+# Login with Facebook
+gem 'omniauth-facebook'
+gem 'devise', '~> 4.2'
