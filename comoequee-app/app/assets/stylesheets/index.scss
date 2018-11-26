@@ -147,7 +147,6 @@ div#div-down p{
 }
 
 #column img {
-    background-color: #ddd;
     border-radius: 100%;
     border-right: 20px;
     height: 200px;
@@ -157,6 +156,9 @@ div#div-down p{
 #column{
     display: flex;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #arrow-left{
