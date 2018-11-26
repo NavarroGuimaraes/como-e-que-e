@@ -5,14 +5,14 @@
 		<p class="profile_text2"><a href="#">editar</a></p>
 	</div>
 		<img class="profile_image">
-		<p class="profile_name"><b>Nome_de_usuario</b></p>
-		<p class="profile_description">Descrição</p>
-		<p class="profile_phone"><b>(81) 99999-9999</b></p>
-		<p class="facebook_profile"><b>fb.me/nome.do.usuario</b></p>
-		<img class="profile_photo_xp">
+		<p class="profile_name"><b><%= @user.name %></b></p>
+		<p class="profile_description"><%= @user.bio %></p>
+		<p class="profile_phone"><b><%= @user.phone %></b></p>
+		<p class="facebook_profile"><b><%= @user.facebook %></b></p>
+		<!--<img class="profile_photo_xp">
 		<p class="profile_level"><b>Level</b></p>
 		<div class="profile_bar"></div>
-		<p class="profile_xp">50/250</p>
+		<p class="profile_xp">50/250</p>-->
 
 	</div>
 
@@ -20,14 +20,14 @@
 	<div class="profile_right_part">
 		<p class="profile_courses_text"><b>Cursos em andamento</b></p>
 
-		<div class="profile_courses1"><p class="course_name1">Nome do Curso</p>
+		<!--<div class="profile_courses1"><p class="course_name1">Nome do Curso</p>
 		<p class="progress_course1">% Concluido</p></div>
 
 		<div class="profile_courses2"><p class="course_name2">Nome do Curso</p>
 		<p class="progress_course2">% Concluido</p></div><br>
 		
 		<a href="#" class="button_more_options">veja mais</a>
-
+		-->
 		<p class="want_to_learn_more"><b>Tem vontade de aprender mais coisas?</b></p>
 
 		<div class="want_to_learn_more_courses">
@@ -55,7 +55,7 @@
            	 	</a>
 			</div>
 		</div><br>
-
+		<% if @remember_courses.any? %>
 		<p class="remember_tutorials"><b>Relembre alguns assuntos</b></p>
 
 		<div class="remember_some_courses">
@@ -83,6 +83,7 @@
            	 	</a>
 			</div>
 		</div><br>
+		<% end %>
 
 
 </section>

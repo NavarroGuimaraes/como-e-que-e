@@ -14,6 +14,8 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
  html, body {
    margin: 0;
    width: 100%;
@@ -131,7 +133,6 @@
 /*FOOTER*/
 
 footer {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;

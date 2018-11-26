@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  
+  include Omniauthenticable
+  
   # Validation
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, 'valid_email_2/email': true
   has_secure_password
+  
+  devise :omniauthable, omniauth_providers: %i[facebook]
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
