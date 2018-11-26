@@ -84,3 +84,6 @@ gem 'omniauth-google-oauth2', '~> 0.2.1'
 
 # Search
 gem 'ransack'
+
+# Youtube
+gem 'yt', '~> 0.28.0'
