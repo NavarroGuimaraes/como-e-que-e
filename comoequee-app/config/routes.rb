@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :crudtutoriais
-  get 'crudtutorial/index'
   # Session and user routes
   get  '/login/',                     to: 'session#new',          as: 'login'
   post '/login/',                     to: 'session#create',       as: 'login-form'
@@ -20,13 +18,10 @@ Rails.application.routes.draw do
   get  '/perfil/',                    to: 'profile#index',        as: 'profile'
   get  '/tutoriais/',                 to: 'tutorials#index',      as: 'tutorials'
   get  '/index/',                     to: 'index#index',          as: 'index'
-
-  root 'index#index'
-  # FORMAT: get: [path], to: [controller#action], as: [name of route]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
   }
-
+  root 'index#index'
+  # FORMAT: get: [path], to: [controller#action], as: [name of route]
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
