@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :crudtutoriais
-  get 'tutorial/index'
+  get 'crudtutorial/index'
   # Session and user routes
   get  '/login/',                     to: 'session#new',          as: 'login'
   post '/login/',                     to: 'session#create',       as: 'login-form'
