@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class TutorialController < ApplicationController
-  #before_action :authorize
-  Yt.configure do |config|
-    config.api_key = 'AIzaSyA8h7I4wunB3J-0sH-7VMu1vKIQGGDK_iw'
-  end
+  before_action :authorize
+  # Yt.configure do |config|
+  #   config.api_key = 'AIzaSyA8h7I4wunB3J-0sH-7VMu1vKIQGGDK_iw'
+  # end
 
   def show
     # Tutorial

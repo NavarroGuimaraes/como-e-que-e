@@ -36,24 +36,21 @@ ActiveRecord::Schema.define(version: 2018_11_26_021827) do
     t.index ["chapter_id"], name: "index_contents_on_chapter_id"
   end
 
+  create_table "crudtutoriais", force: :cascade do |t|
+    t.string "id_seq"
+    t.string "namecourse"
+    t.string "namechapter"
+    t.string "contentchapter"
+    t.string "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tutorials", force: :cascade do |t|
     t.string "name"
     t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "user_googles", force: :cascade do |t|
-    t.string "provider"
-    t.string "uid"
-    t.string "name"
-    t.string "oauth_token"
-    t.datetime "oauth_expires_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "phone"
-    t.string "facebook"
-    t.text "bio"
   end
 
   create_table "user_tutorials", force: :cascade do |t|

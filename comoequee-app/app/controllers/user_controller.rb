@@ -12,7 +12,7 @@ class UserController < ApplicationController
     if user.save
       session[:user_id] = user.id
       redirect_to login_url, notice: 'Cadastro realizado com sucesso!'
-      set_flash_message(:notice, :sucess, kind: 'Cadastro')
+      # set_flash_message(:notice, :sucess, kind: 'Cadastro')
     else
       flash[:error] = 'Ops, parece que ocorreu um erro :( Tente novamente'
       redirect_to login_url
